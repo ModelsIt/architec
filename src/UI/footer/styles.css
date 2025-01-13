@@ -1,0 +1,65 @@
+.footer {
+  background: #000;
+}
+
+.footerFrstBlok {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.footerInputBox {
+  transform: skew(18deg);
+}
+.footerInputBox input {
+  width: 515px;
+  height: 56px;
+}
+.footerInputBox button {
+  width: 136px;
+  height: 56px;
+  margin-left: 15px;
+}
+.IconBox {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+.IconBox a {
+  width: 53px;
+  height: 40px;
+  background: #213f7f;
+  transform: skew(18deg);
+  text-align: center;
+}
+.IconBox a svg {
+  color: #57a6fa;
+  padding-top: 12px;
+  transform: skew(-18deg);
+}
+.footerTwoBlok {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 50px;
+}
+.footerTwoBlok div {
+  /* color: #213f7f; */
+  /* color: #12d1dd; */
+  /* color: #2869ce; */
+  color: #57a6fa;
+}
+.footerLink {
+  display: flex;
+  flex-direction: column;
+}
+.footerLink a {
+  color: #57a6fa;
+  text-decoration: none;
+}
+.adresBox span {
+  padding-left: 10px;
+}
+.adresPharagrafBox {
+  padding-left: 23px;
+}

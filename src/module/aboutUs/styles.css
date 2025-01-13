@@ -1,0 +1,383 @@
+.about-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #f3f3f3;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-left {
+  flex: 1;
+  background-color: #100d0d;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  border: none;
+  z-index: 1;
+  width: 100%;
+}
+
+.about-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #000000;
+  clip-path: polygon(0 0, 60% 0, 100% 100%, 0% 100%);
+  padding-left: 100px;
+  height: 100%;
+  width: 68%;
+  z-index: -1111;
+}
+
+.about-left h3 {
+  color: #57a6fa;
+  font-weight: bold;
+}
+
+.about-left h1 {
+  font-size: 2.5rem;
+  line-height: 1.3;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.about-left p {
+  font-size: 1rem;
+  margin-top: 20px;
+  line-height: 1.6;
+  margin-left: 50px;
+}
+.aboutInfoBox {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.aboutInfoBox.visible {
+  opacity: 1;
+  transform: translateX(18%);
+}
+
+.aboutInfoBox h1 {
+  font-size: calc(1rem + 2.5vw);
+  width: 1000px;
+  color: #d6d7d8;
+}
+.linel {
+  width: 80%;
+  height: 1px;
+  background: white;
+  margin-top: 20px;
+}
+.aboutInfo p {
+  width: 700px;
+}
+.ctaButton {
+  margin-top: 20px;
+}
+.buttonGroup {
+  display: flex;
+}
+.buttonGroup .button {
+  transform: skew(18deg);
+  background: #d6d7d8;
+  color: #57a6fa;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.buttonTitle {
+  transform: skew(-18deg) !important;
+}
+.button.active {
+  background: #57a6fa;
+  color: #d6d7d8;
+}
+.buttonMakeAppointment {
+  transform: skew(18deg);
+  background: #d6d7d8;
+  color: #57a6fa;
+  padding: 13px 20px;
+  /* margin-right: 10px; */
+  cursor: pointer;
+  font-weight: bold;
+  width: 208px;
+  margin-top: 20px;
+  height: 50px;
+  text-align: center;
+}
+
+.robot-image {
+  width: 700px;
+  height: auto;
+  left: 58%;
+  bottom: -2.5%;
+  position: relative;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 1s, transform 1s;
+}
+.robot-image.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.blog {
+  overflow: hidden;
+}
+
+.blog .blog-item {
+  position: relative;
+  border: 1px solid var(--bs-primary);
+  transition: 0.5s;
+}
+
+.blog .blog-item .blog-content {
+  background: var(--bs-white);
+}
+
+.blog .blog-item .blog-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.blog .blog-item .blog-img img {
+  transition: 0.5s;
+  max-width: 100%;
+  height: auto;
+}
+
+.blog .blog-item:hover .blog-img img {
+  transform: scale(1.3);
+}
+
+.blog .blog-item .blog-img::after {
+  content: "";
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: skew(100deg);
+  background: #d6d7d8;
+  border: none;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.blog .blog-item .blog-img::before {
+  content: "";
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: skew(-100deg);
+  background: #57a6fa;
+  border: none;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.blog-content .blog-comment {
+  transform: skew(8deg);
+  background: rgba(12, 24, 68, 1);
+}
+
+.blog-content .blog-comment div.small,
+.blog-content .blog-comment span {
+  transform: skew(-4deg);
+}
+
+.container-fluid {
+  background: #000 !important;
+}
+
+.container-fluid.blog {
+  padding-top: 5.3rem !important;
+  padding-bottom: 5.3rem !important;
+}
+
+.container.py-5 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pb-5 {
+  padding-bottom: 3rem;
+}
+
+.text-primary {
+  color: #007bff;
+}
+
+.display-4 {
+  font-size: 3rem;
+  color: white;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.blog-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--bs-primary);
+  transition: 0.5s;
+  background-color: #100d0d !important;
+}
+
+.blog-img.p-4.pb-0 {
+  padding: 1.5rem;
+  padding-bottom: 0;
+}
+
+.img-fluid.w-100 {
+  height: 300px !important;
+  width: 360px;
+}
+
+.blog-content.p-4 {
+  padding: 1.5rem;
+}
+.blog-content {
+  background-color: #100d0d !important;
+  color: white !important;
+}
+.blog-content .h4 {
+  font-size: 1.5rem;
+}
+
+.blog-item .blog-img img {
+  transition: 0.5s;
+  max-width: 100%;
+  height: auto;
+}
+
+.blog-item .blog-img img:hover {
+  transform: scale(1.05);
+}
+
+.blog .blog-comment {
+  font-size: 0.875rem;
+}
+.paragraph {
+  height: 80px;
+  color: #d6d7d8;
+}
+.blog-item .btn.btn-dark {
+  background-color: #343a40;
+  color: white;
+  text-decoration: none;
+}
+.slick-slider {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slick-slide {
+  padding: 0 10px;
+}
+
+.blog-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.slick-track {
+  display: flex;
+  gap: 20px;
+}
+
+.blog-item:hover {
+  transform: scale(1.05);
+}
+
+.blogPrevCarousel {
+  z-index: 2;
+  width: 40px !important;
+  height: 40px !important;
+  transform: skew(18deg) !important;
+  background: #57a6fa !important;
+  color: wheat !important;
+  font-size: 26px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: 0.5s !important;
+}
+.prevButton {
+  background: #dbdbdb !important;
+  width: 20px;
+  height: 20px;
+}
+
+.blogPrevCarousel.active {
+  width: 40px !important;
+  height: 60px !important;
+  background: #dbdbdb !important;
+}
+.blogPrevCarousel.active .prevButton {
+  background: #57a6fa !important;
+  width: 20px;
+  height: 30px;
+}
+
+.blogNextCarousel {
+  z-index: 2;
+  width: 40px !important;
+  height: 40px !important;
+  transform: skew(18deg) !important;
+  background: #57a6fa !important;
+  color: wheat !important;
+  font-size: 26px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: 0.5s !important;
+  transition: all 0.3s ease-in-out !important;
+}
+.nextButton {
+  background: #c0c0c0 !important;
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.blogNextCarousel.active {
+  width: 40px !important;
+  height: 60px !important;
+  background: #dbdbdb !important;
+}
+.blogNextCarousel.active .nextButton {
+  background: #57a6fa !important;
+  width: 20px;
+  height: 30px;
+}

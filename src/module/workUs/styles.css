@@ -1,0 +1,123 @@
+.WorkUsContainer {
+  background: #000;
+  padding: 0 50px;
+}
+.WorkUsFirstContainer {
+  padding: 5%;
+}
+.video {
+  /* border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px; */
+  width: 515px;
+  height: 315px;
+}
+.WorkUsFirstContainer span {
+  color: aliceblue;
+}
+.WorkUsFirstContainer ul li {
+  color: aliceblue;
+}
+.lastParagraph {
+  margin: 35px 0px;
+  font-size: 22px;
+}
+.WorkUsTwoContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+}
+.WorkUsTwoContainer iframe {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.WorkUsTwoContainer p {
+  color: aliceblue;
+  padding-left: 70px;
+  width: 600px;
+}
+.WorkUsThreeContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+}
+.WorkUsThreeContainer div iframe {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.WorkUsThreeList {
+  width: 56%;
+}
+.WorkUsThreeList ul li {
+  color: aliceblue;
+}
+.WorkUsThreeListTitle {
+  color: aliceblue;
+}
+.WorkUsThorContainer {
+  display: flex;
+  align-items: center;
+}
+.WorkUsThorParagraphList {
+  padding-left: 70px;
+  width: 56%;
+}
+.WorkUsThorContainer iframe {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.WorkUsThorParagraphList p {
+  color: aliceblue;
+}
+.WorkUsThorParagraphList span {
+  color: aliceblue;
+}
+.WorkUsThorParagraphList ul li {
+  color: aliceblue;
+}
+.WorkUsFiveContainer {
+  padding: 30px 0 30px 100px;
+  color: aliceblue;
+}
+.WorkUsSixContainer {
+  display: flex;
+  align-items: center;
+}
+.WorkUsSixContainer p {
+  color: aliceblue;
+  padding-right: 200px;
+  width: 56%;
+}
+
+.WorkUsSixContainer iframe {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.WorkUsSevenContainer {
+  display: flex;
+  align-items: center;
+}
+.WorkUsSevenContainer iframe {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.WorkUsSevenContainer div {
+  color: aliceblue;
+  padding-left: 70px;
+  width: 56%;
+}
+
+.WorkUsEightContainer {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 50px; */
+  padding-bottom: 50px;
+}
+.WorkUsEightContainer div {
+  color: aliceblue;
+  padding-right: 70px;
+  width: 56%;
+}
+.WorkUsEightContainer iframe {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}

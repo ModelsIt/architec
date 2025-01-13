@@ -1,0 +1,199 @@
+.showWorkContainer {
+  background: #000;
+}
+
+.pageContainer {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-gap: 20px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.textSection {
+  grid-row: 1;
+  color: white;
+}
+
+.videoSection {
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.videoSection iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+}
+
+/* .gallery {
+  display: grid;
+  gap: 10px;
+  padding: 210px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+}
+
+.galleryItem {
+  background: #090909;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.galleryItem img {
+  width: 100%;
+  height: 100%;
+}
+.galleryItem:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.imgCenter {
+  text-align: center;
+}
+.galleryItem.tall {
+  grid-row: span 2;
+}
+.galleryItem.wide {
+  grid-column: span 2;
+  text-align: center;
+}
+.galleryItem.wide img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .galleryItem.tall {
+    grid-row: span 1;
+  }
+
+  .galleryOItem.wide {
+    grid-column: span 1;
+  }
+} */
+.videoFurniture {
+  border-radius: 45px;
+}
+.gallery {
+  display: grid;
+  gap: 10px;
+  padding: 20px; /* Կարգավորել ըստ անհրաժեշտության */
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+}
+
+.galleryItem {
+  background: #090909;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Ավելացված՝ նկարները դուրս չգան շրջանակից */
+}
+
+.galleryItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Նկարները կտրված կդիտվեն առանց ձգվելու */
+  object-position: center; /* Կենտրոնացնում է նկարները */
+}
+
+.galleryItem:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.imgCenter img {
+  width: 55% !important;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.galleryItem.tall {
+  grid-row: span 2;
+}
+
+.galleryItem.wide {
+  grid-column: span 2;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .galleryItem.tall {
+    grid-row: span 1; /* Կարգավորվում է ըստ էկրանի չափերի */
+  }
+
+  .galleryItem.wide {
+    grid-column: span 1;
+  }
+}
+
+.modas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.vertical-image {
+  aspect-ratio: 16/9;
+  padding: 5%;
+}
+
+.horizontal-image {
+  aspect-ratio: 16/9;
+  padding: 5%;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 0px;
+}
+
+.next-btn {
+  right: 0px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}

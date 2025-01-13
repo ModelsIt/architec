@@ -1,0 +1,84 @@
+.uslogiContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.uslogiContainerBox {
+  position: relative;
+  background: linear-gradient(rgba(255, 245, 225, 0.9), rgba(12, 24, 68, 0.9)),
+    url(./img/uslogiBaqground.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 953px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+.uslogiInfo h1 {
+  margin-left: 15px;
+  color: #57a6fa;
+}
+.uslogiInfo h2 {
+  margin: 50px 0 50px 35px;
+  color: #57a6fa;
+}
+.uslogiList {
+  margin-left: 100px;
+}
+.uslogiList h4 {
+  margin: 40px 0 40px 0;
+  color: #d6d7d8;
+}
+.uslogiList ul li {
+  font-size: 16px;
+  color: #d6d7d8;
+}
+
+.uslogiImgOne.visibleUslogi {
+  position: absolute;
+  top: 63%;
+  right: -50%;
+  transform: translateY(-50%);
+  width: 700px;
+  height: 700px;
+  background-image: url("./img/uslogiImgOne.png");
+  background-size: cover;
+  background-position: center;
+  animation: moveImageHorizontal 3s ease-out forwards;
+}
+
+@keyframes moveImageHorizontal {
+  0% {
+    right: -10%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
+.uslogiInfo.visibleUslogi {
+  position: absolute;
+  top: 50%;
+  left: -30%;
+  font-weight: bold;
+  color: #333;
+  transform: translateY(-50%);
+  animation: moveTextHorizontal 3s ease-out forwards;
+}
+
+@keyframes moveTextHorizontal {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 0;
+  }
+}
+.uslogiFooter {
+  padding-top: 20px;
+  background: black;
+}
