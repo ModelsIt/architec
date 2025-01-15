@@ -5,7 +5,7 @@
 .footerFrstBlok {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   padding: 0 50px;
 }
 
@@ -38,18 +38,36 @@
   padding-top: 12px;
   transform: skew(-18deg);
 }
+.logoImg {
+  width: 200px;
+  height: 70px;
+}
 .footerTwoBlok {
   display: flex;
   justify-content: space-between;
   padding: 25px 50px;
 }
 .footerTwoBlok div {
-  /* color: #213f7f; */
-  /* color: #12d1dd; */
-  /* color: #2869ce; */
   color: #57a6fa;
 }
+.footerParagraph {
+  width: 15%;
+}
+
+.footerParagraph p {
+  padding-top: 2%;
+}
 .footerLink {
+  display: flex;
+  flex-direction: column;
+}
+.footerLinkBox {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerLinkBoxOne {
   display: flex;
   flex-direction: column;
 }
@@ -62,4 +80,7 @@
 }
 .adresPharagrafBox {
   padding-left: 23px;
+}
+.mapGoogle {
+  margin-top: 3%;
 }

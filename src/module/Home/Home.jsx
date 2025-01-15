@@ -27,6 +27,9 @@ import portfolImgOne from "./img/portfolImgOne.png";
 import portfolImgTwo from "./img/portfolImgTwo.png";
 import portfolImgThree from "./img/portfolImgThree.png";
 import portfoliImgThour from "./img/portfoliImgThour.png";
+
+import { FormattedMessage } from "react-intl";
+import messages from "./messages.js";
 function CustomPrevArrow(props) {
   const { style, onClick } = props;
   return (
@@ -159,66 +162,63 @@ function CustomNextButton(props) {
 export const Home = () => {
   const slides = [
     {
-      title: "Цифровизируйте Вашу Идею",
-      descriptionTitle: "ArchiTek Soft",
-      description:
-        "компания, занимающаяся инновационными технологиями, предлагающая профессиональные решения для цифровизациив различных отраслях. Мы преобразуем ваши идеи, делая ихвидимыми, интерактивными и доступными.",
+      title: <FormattedMessage {...messages.homePageCourseTitle} />,
+      // descriptionTitle: "ArchiTek Soft",
+      description: <FormattedMessage {...messages.homePageCourseParagraph} />,
       image: img1,
     },
     {
-      title: "Цифровизируйте Вашу Идею",
-      descriptionTitle: "ArchiTek Soft",
-      description:
-        "компания, занимающаяся инновационными технологиями, предлагающая профессиональные решения для цифровизациив различных отраслях. Мы преобразуем ваши идеи, делая ихвидимыми, интерактивными и доступными.",
+      title: <FormattedMessage {...messages.homePageCourseTitle} />,
+      // descriptionTitle: "ArchiTek Soft",
+      description: <FormattedMessage {...messages.homePageCourseParagraph} />,
       image: img2,
     },
     {
-      title: "Цифровизируйте Вашу Идею",
-      descriptionTitle: "ArchiTek Soft",
-      description:
-        "компания, занимающаяся инновационными технологиями, предлагающая профессиональные решения для цифровизациив различных отраслях. Мы преобразуем ваши идеи, делая ихвидимыми, интерактивными и доступными.",
+      title: <FormattedMessage {...messages.homePageCourseTitle} />,
+      // descriptionTitle: "ArchiTek Soft",
+      description: <FormattedMessage {...messages.homePageCourseParagraph} />,
       image: img3,
     },
   ];
 
   const slidesOne = [
     {
-      description: "Инновации — Мы создаем то, чего ещё нет.",
+      description: <FormattedMessage {...messages.chooseCardOne} />,
       image: img5,
     },
     {
-      description:
-        "Ориентированность на клиента — Наши решения разрабатываются с учётом ваших потребностей.",
+      description: <FormattedMessage {...messages.chooseCardOneTwo} />,
+
       image: img6,
     },
     {
       title: "Цифровизируйте Вашу Идею",
       descriptionTitle: "ArchiTek Soft",
-      description:
-        "Скорость и точность — Мы уверены, что каждый проект может быть выполнен быстро, качественно и профессионально.",
+      description: <FormattedMessage {...messages.chooseCardOneThere} />,
+
       image: img7,
     },
     {
       title: "Цифровизируйте Вашу Идею",
       descriptionTitle: "ArchiTek Soft",
-      description:
-        "Профессиональный рост — Мы постоянно совершенствуем свои навыки, чтобы развиваться вместе с технологическим миром.",
+      description: <FormattedMessage {...messages.chooseCardOneFoure} />,
+
       image: img8,
     },
   ];
 
   const paragraphs = [
-    "Наша команда состоит из опытных разработчиков, которые постоянно работают над предложением инновационных решений и наилучшим образом реагируют на потребности наших клиентов.ArchiTek Soft — это не только технологии, но и стремление воплотить ваши самые ",
+    <FormattedMessage {...messages.oNasButtonOneParagraph} />,
 
-    "Стать ведущей компанией в области AR и VR технологий, открывая новые возможности для бизнеса и людей. Мы стремимся стать инструментом, который принесет будущее в нашу современную реальность.",
+    <FormattedMessage {...messages.oNasButtonTwoParagraph} />,
 
-    "Мы стремимся преобразовать традиционные подходы, предлагая интерактивные,визуальные и доступные инструменты, которые помогут компаниям лучше представлять свою продукцию и позволят клиентам принимать обоснованные решения до совершения покупки.ArchiTek Soft — это платформа для инновационных идей, направленная на улучшение жизни людей.",
+    <FormattedMessage {...messages.oNasButtonThereParagraph} />,
   ];
   const features = [
     {
       id: 1,
       title: "Work Your Butt Off",
-      text: "BossHunter VR - это первая версия игры, в которой игрокам предстоит сразиться с множеством интересных противников, использовать несколько видов оружия и уникальную в своем роде механику, когда игрок напрямую командует",
+      text: <FormattedMessage {...messages.projectsCardPharagrapOne} />,
       imgSrc: portfolImgOne,
       delay: "0.2s",
       to: "https://store.steampowered.com/app/2439730/BossHunter_VR/",
@@ -227,7 +227,7 @@ export const Home = () => {
     {
       id: 2,
       title: "Get In The Groove",
-      text: "Динамичный опыт для изучения строящихся зданий, типовых квартир и окружающей территории, включая возможность просмотра с помощью VR-очков.",
+      text: <FormattedMessage {...messages.projectsCardPharagrapThou} />,
       imgSrc: portfolImgTwo,
       delay: "0.4s",
       to: "/showJob",
@@ -236,7 +236,8 @@ export const Home = () => {
     {
       id: 3,
       title: "It's More Than A Game",
-      text: "Динамичная программа для дизайна мебели с возможностью изучения различных моделей и цветов, открытия ящиков и заказа индивидуальных решений через виртуальную реальность (VR).",
+      text: <FormattedMessage {...messages.projectsCardPharagrapThree} />,
+
       imgSrc: portfolImgThree,
       delay: "0.6s",
       to: "/showJobOne",
@@ -245,7 +246,8 @@ export const Home = () => {
     {
       id: 4,
       title: "It's More Than A Game",
-      text: "Комплексные программные решения для всех отраслей — от бизнес-инструментов до инновационных игр и приложений, адаптированных под ваши потребности и цели.",
+      text: <FormattedMessage {...messages.projectsCardPharagrapFoure} />,
+
       imgSrc: portfoliImgThour,
       delay: "0.6s",
       to: "/workUs",
@@ -405,30 +407,36 @@ export const Home = () => {
             className={`aboutInfoBox ${isVisible ? "visible" : ""}`}
             ref={aboutInfoBoxRef}
           >
-            <h3>о нас</h3>
+            <h3>
+              <FormattedMessage {...messages.oNasTitle} />
+            </h3>
             <h1>
-              Инновационные технологии <br />
-              для создания будущего вашего бизнеса
+              <FormattedMessage {...messages.oNasTitleOne} />
             </h1>
-            <p>Давайте вместе цифровизируем будущее.</p>
+            <p>
+              <FormattedMessage {...messages.oNasTitleTwo} />
+            </p>
             <div className="buttonGroup">
               <div
                 className={`button ${activeButtonIndex === 1 ? "active" : ""}`}
                 onClick={() => setActiveButtonIndex(1)}
               >
-                <div className="buttonTitle"> Наша команда</div>
+                <FormattedMessage {...messages.oNasButtonOne} />
+                <div className="buttonTitle"> </div>
               </div>
               <div
                 className={`button ${activeButtonIndex === 2 ? "active" : ""}`}
                 onClick={() => setActiveButtonIndex(2)}
               >
-                <div className="buttonTitle"> Наше Видение</div>
+                <FormattedMessage {...messages.oNasButtonTwo} />
+                <div className="buttonTitle"> </div>
               </div>
               <div
                 className={`button ${activeButtonIndex === 3 ? "active" : ""}`}
                 onClick={() => setActiveButtonIndex(3)}
               >
-                <div className="buttonTitle"> Наша Миссия</div>
+                <FormattedMessage {...messages.oNasButtonThere} />
+                <div className="buttonTitle"> </div>
               </div>
             </div>
             <div className="linel"></div>
@@ -436,9 +444,9 @@ export const Home = () => {
               <p>{paragraphs[activeButtonIndex - 1]}</p>
             </div>
             <div className="linel"></div>
-            <div className="buttonMakeAppointment">
+            {/* <div className="buttonMakeAppointment">
               <div className="buttonTitle">Make Appointment</div>
-            </div>
+            </div> */}
           </div>
           <img
             src={img4}
@@ -454,7 +462,9 @@ export const Home = () => {
             className="text-center mx-auto pb-5 wow fadeInUp"
             data-wow-delay="0.2s"
           >
-            <h1 className="display-4 mb-4">почему выбирают нас?</h1>
+            <h1 className="display-4 mb-4">
+              <FormattedMessage {...messages.chooseTitle} />
+            </h1>
           </div>
           <Slider
             {...{
@@ -504,52 +514,60 @@ export const Home = () => {
           className={`uslogiInfo ${isVisibleUslogi ? "visibleUslogi" : ""}`}
           ref={uslogiRef}
         >
-          <h1>Услуги</h1>
-          <h2>Цифровые решения для всех</h2>
+          <h1>
+            <FormattedMessage {...messages.uslogiTitle} />
+          </h1>
+          <h2>
+            <FormattedMessage {...messages.uslogiTitleOne} />
+          </h2>
           <div className="uslogiList">
-            <h4>Визуализация недвижимости</h4>
+            <h4>
+              {" "}
+              <FormattedMessage {...messages.uslogiLisTitleOne} />
+            </h4>
             <ul>
               <li>
-                Динамичные виртуальные эксперименты с изменением сезонов,
-                времени суток и освещения.
+                <FormattedMessage {...messages.uslogiLisOne} />
               </li>
               <li>
-                Полное изучение ориентации квартиры (север-юг) и её планировки.
+                <FormattedMessage {...messages.uslogiLisTwo} />
               </li>
+              <li>
+                <FormattedMessage {...messages.uslogiLisThree} />
+              </li>
+              <li>
+                <FormattedMessage {...messages.uslogiLisFhree} />
+              </li>
+            </ul>
+            <h4>
+              {" "}
+              <FormattedMessage {...messages.uslogiLisTitleTwo} />
+            </h4>
+            <ul>
               <li>
                 {" "}
-                Возможности изменения дизайна и расположения мебели в реальном
-                времени.
+                <FormattedMessage {...messages.uslogiLisFive} />
               </li>
               <li>
-                Многофункциональные программные решения для компьютеров и других
-                устройств.
-              </li>
-            </ul>
-            <h4> Для мебельных магазинов</h4>
-            <ul>
-              <li>Интерактивные 3D-дизайны с настройкой цветов и размеров.</li>
-              <li>
-                Демонстрация и адаптация различных предметов мебели по
-                предпочтениям клиента.
+                <FormattedMessage {...messages.uslogiLisSix} />
               </li>
               <li>
-                Инструмент виртуального размещения для визуализации мебели в
-                пространстве клиента.
+                <FormattedMessage {...messages.uslogiLisSeven} />
               </li>
             </ul>
-            <h4>Индивидуальные решения</h4>
+            <h4>
+              {" "}
+              <FormattedMessage {...messages.uslogiLisTitleThree} />
+            </h4>
             <ul>
               <li>
-                Цифровые решения для любых целей, от приложений до
-                бизнес-инструментов.
+                <FormattedMessage {...messages.uslogiLisEight} />
               </li>
               <li>
-                Виртуальные эксперименты и интерактивные программы, совместимые
-                со всеми устройствами.
+                <FormattedMessage {...messages.uslogiLisNine} />
               </li>
               <li>
-                Инновационное программное обеспечение для реализации любых идей.
+                <FormattedMessage {...messages.uslogiLisThen} />
               </li>
             </ul>
           </div>
@@ -568,7 +586,10 @@ export const Home = () => {
             data-wow-delay="0.2s"
             style={{ maxWidth: "800px" }}
           >
-            <h1 className="text-primary"> портфель</h1>
+            <h1 className="text-primary">
+              {" "}
+              <FormattedMessage {...messages.projectsTitle} />
+            </h1>
           </div>
 
           <div
@@ -581,7 +602,7 @@ export const Home = () => {
                 speed: 500,
                 slidesToShow: 3,
                 slidesToScroll: 1,
-                autoplay: true,
+                autoplay: false,
                 autoplaySpeed: 2000,
                 prevArrow: <CustomPrevButton />,
                 nextArrow: <CustomNextButton />,

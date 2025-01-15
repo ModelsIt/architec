@@ -17,12 +17,12 @@ import portfolImgThree from "./img/portfolImgThree.png";
 import portfoliImgThour from "./img/portfoliImgThour.png";
 
 import { NavLink } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
+import messages from "./messages.js";
 function CustomPrevButton(props) {
   const { style, onClick } = props;
   return (
     <div className="slickPrev" onClick={onClick}>
-      {/* <FontAwesomeIcon icon={faArrowRight} className="arrowRight" /> */}
-
       <FontAwesomeIcon icon={faArrowLeft} className="faArrowLeft" />
     </div>
   );
@@ -43,7 +43,7 @@ export const Portfel = () => {
     {
       id: 1,
       title: "Work Your Butt Off",
-      text: "BossHunter VR - это первая версия игры, в которой игрокам предстоит сразиться с множеством интересных противников, использовать несколько видов оружия и уникальную в своем роде механику, когда игрок напрямую командует",
+      text: <FormattedMessage {...messages.projectsCardPharagrapOne} />,
       imgSrc: portfolImgOne,
       delay: "0.2s",
       to: "https://store.steampowered.com/app/2439730/BossHunter_VR/",
@@ -52,9 +52,8 @@ export const Portfel = () => {
     {
       id: 2,
       title: "Get In The Groove",
-      text: "Динамичный опыт для изучения строящихся зданий, типовых квартир и окружающей территории, включая возможность просмотра с помощью VR-очков.",
+      text: <FormattedMessage {...messages.projectsCardPharagrapThou} />,
       imgSrc: portfolImgTwo,
-      delay: "0.4s",
       delay: "0.4s",
       to: "/showJob",
       target: "_self",
@@ -62,7 +61,8 @@ export const Portfel = () => {
     {
       id: 3,
       title: "It's More Than A Game",
-      text: "Динамичная программа для дизайна мебели с возможностью изучения различных моделей и цветов, открытия ящиков и заказа индивидуальных решений через виртуальную реальность (VR).",
+      text: <FormattedMessage {...messages.projectsCardPharagrapThree} />,
+
       imgSrc: portfolImgThree,
       delay: "0.6s",
       to: "/showJobOne",
@@ -71,7 +71,8 @@ export const Portfel = () => {
     {
       id: 4,
       title: "It's More Than A Game",
-      text: "Комплексные программные решения для всех отраслей — от бизнес-инструментов до инновационных игр и приложений, адаптированных под ваши потребности и цели.",
+      text: <FormattedMessage {...messages.projectsCardPharagrapFoure} />,
+
       imgSrc: portfoliImgThour,
       delay: "0.6s",
       to: "/workUs",
@@ -113,7 +114,9 @@ export const Portfel = () => {
             data-wow-delay="0.2s"
             style={{ maxWidth: "800px" }}
           >
-            <h1 className="text-primary"> портфель</h1>
+            <h1 className="text-primary">
+              <FormattedMessage {...messages.projectsTitle} />
+            </h1>
           </div>
 
           <div

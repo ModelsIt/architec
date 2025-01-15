@@ -13,7 +13,8 @@ import img7 from "./img/51.png";
 import img8 from "./img/52.png";
 
 import "./styles.css";
-import { Footer } from "../../UI/footer/footer";
+import { FormattedMessage } from "react-intl";
+import messages from "./messages.js";
 function CustomPrev(props) {
   const { style, onClick, isClicked, setActiveButton } = props;
 
@@ -80,34 +81,34 @@ export const AboutUs = () => {
   const [activeButtonIndex, setActiveButtonIndex] = useState(1);
   const [activeButton, setActiveButton] = useState(null);
   const paragraphs = [
-    "Наша команда состоит из опытных разработчиков, которые постоянно работают над предложением инновационных решений и наилучшим образом реагируют на потребности наших клиентов.ArchiTek Soft — это не только технологии, но и стремление воплотить ваши самые ",
+    <FormattedMessage {...messages.oNasButtonOneParagraph} />,
 
-    "Стать ведущей компанией в области AR и VR технологий, открывая новые возможности для бизнеса и людей. Мы стремимся стать инструментом, который принесет будущее в нашу современную реальность.",
+    <FormattedMessage {...messages.oNasButtonTwoParagraph} />,
 
-    "Мы стремимся преобразовать традиционные подходы, предлагая интерактивные,визуальные и доступные инструменты, которые помогут компаниям лучше представлять свою продукцию и позволят клиентам принимать обоснованные решения до совершения покупки.ArchiTek Soft — это платформа для инновационных идей, направленная на улучшение жизни людей.",
+    <FormattedMessage {...messages.oNasButtonThereParagraph} />,
   ];
   const slidesOne = [
     {
-      description: "Инновации — Мы создаем то, чего ещё нет.",
+      description: <FormattedMessage {...messages.chooseCardOne} />,
       image: img5,
     },
     {
-      description:
-        "Ориентированность на клиента — Наши решения разрабатываются с учётом ваших потребностей.",
+      description: <FormattedMessage {...messages.chooseCardOneTwo} />,
+
       image: img6,
     },
     {
       title: "Цифровизируйте Вашу Идею",
       descriptionTitle: "ArchiTek Soft",
-      description:
-        "Скорость и точность — Мы уверены, что каждый проект может быть выполнен быстро, качественно и профессионально.",
+      description: <FormattedMessage {...messages.chooseCardOneThere} />,
+
       image: img7,
     },
     {
       title: "Цифровизируйте Вашу Идею",
       descriptionTitle: "ArchiTek Soft",
-      description:
-        "Профессиональный рост — Мы постоянно совершенствуем свои навыки, чтобы развиваться вместе с технологическим миром.",
+      description: <FormattedMessage {...messages.chooseCardOneFoure} />,
+
       image: img8,
     },
   ];
@@ -142,30 +143,36 @@ export const AboutUs = () => {
             className={`aboutInfoBox ${isVisible ? "visible" : ""}`}
             ref={aboutInfoBoxRef}
           >
-            <h3>о нас</h3>
+            <h3>
+              <FormattedMessage {...messages.oNasTitle} />
+            </h3>
             <h1>
-              Инновационные технологии <br />
-              для создания будущего вашего бизнеса
+              <FormattedMessage {...messages.oNasTitleOne} />
             </h1>
-            <p>Давайте вместе цифровизируем будущее.</p>
+            <p>
+              <FormattedMessage {...messages.oNasTitleTwo} />
+            </p>
             <div className="buttonGroup">
               <div
                 className={`button ${activeButtonIndex === 1 ? "active" : ""}`}
                 onClick={() => setActiveButtonIndex(1)}
               >
-                <div className="buttonTitle"> Наша команда</div>
+                <FormattedMessage {...messages.oNasButtonOne} />
+                <div className="buttonTitle"> </div>
               </div>
               <div
                 className={`button ${activeButtonIndex === 2 ? "active" : ""}`}
                 onClick={() => setActiveButtonIndex(2)}
               >
-                <div className="buttonTitle"> Наше Видение</div>
+                <FormattedMessage {...messages.oNasButtonTwo} />
+                <div className="buttonTitle"> </div>
               </div>
               <div
                 className={`button ${activeButtonIndex === 3 ? "active" : ""}`}
                 onClick={() => setActiveButtonIndex(3)}
               >
-                <div className="buttonTitle"> Наша Миссия</div>
+                <FormattedMessage {...messages.oNasButtonThere} />
+                <div className="buttonTitle"> </div>
               </div>
             </div>
             <div className="linel"></div>
@@ -173,9 +180,9 @@ export const AboutUs = () => {
               <p>{paragraphs[activeButtonIndex - 1]}</p>
             </div>
             <div className="linel"></div>
-            <div className="buttonMakeAppointment">
-              <div className="buttonTitle">Make Appointment</div>
-            </div>
+            {/* <div className="buttonMakeAppointment">
+                     <div className="buttonTitle">Make Appointment</div>
+                   </div> */}
           </div>
           <img
             src={img4}
@@ -191,7 +198,10 @@ export const AboutUs = () => {
             className="text-center mx-auto pb-5 wow fadeInUp"
             data-wow-delay="0.2s"
           >
-            <h1 className="display-4 mb-4">почему выбирают нас?</h1>
+            <h1 className="display-4 mb-4">
+              {" "}
+              <FormattedMessage {...messages.chooseTitle} />
+            </h1>
           </div>
           <Slider
             {...{

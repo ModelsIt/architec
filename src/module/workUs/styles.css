@@ -5,11 +5,24 @@
 .WorkUsFirstContainer {
   padding: 5%;
 }
+
 .video {
   /* border-top-right-radius: 50px;
   border-bottom-right-radius: 50px; */
   width: 515px;
   height: 315px;
+}
+.workUsParagraphBox {
+  color: aliceblue;
+  width: 50%;
+  padding-left: 5%;
+}
+
+.showJobsTitle {
+  padding-top: 1%;
+}
+.workUsParagraphBox ul li {
+  font-size: 15px;
 }
 .WorkUsFirstContainer span {
   color: aliceblue;
@@ -23,6 +36,7 @@
 }
 .WorkUsTwoContainer {
   display: flex;
+  justify-content: space-around;
   align-items: center;
   margin-top: 70px;
 }
@@ -30,13 +44,10 @@
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
 }
-.WorkUsTwoContainer p {
-  color: aliceblue;
-  padding-left: 70px;
-  width: 600px;
-}
+
 .WorkUsThreeContainer {
   display: flex;
+  justify-content: space-around;
   align-items: center;
   margin-top: 70px;
 }
@@ -47,6 +58,10 @@
 .WorkUsThreeList {
   width: 56%;
 }
+
+.WorkUsThreeList h3 {
+  color: aliceblue;
+}
 .WorkUsThreeList ul li {
   color: aliceblue;
 }
@@ -55,9 +70,11 @@
 }
 .WorkUsThorContainer {
   display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 .WorkUsThorParagraphList {
+  color: aliceblue;
   padding-left: 70px;
   width: 56%;
 }
@@ -80,12 +97,17 @@
 }
 .WorkUsSixContainer {
   display: flex;
+  justify-content: space-around;
   align-items: center;
+}
+.vrParagraphBox {
+  width: 56%;
+  color: aliceblue;
 }
 .WorkUsSixContainer p {
   color: aliceblue;
   padding-right: 200px;
-  width: 56%;
+  /* width: 56%; */
 }
 
 .WorkUsSixContainer iframe {
@@ -94,6 +116,7 @@
 }
 .WorkUsSevenContainer {
   display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 .WorkUsSevenContainer iframe {
@@ -109,6 +132,7 @@
 .WorkUsEightContainer {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   /* margin-bottom: 50px; */
   padding-bottom: 50px;
 }

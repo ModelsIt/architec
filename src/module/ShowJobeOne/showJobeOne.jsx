@@ -17,6 +17,8 @@ import home10 from "./img/Group 6508.png";
 import home11 from "./img/Group 6510.png";
 import home12 from "./img/living_room_1.png";
 import home13 from "./img/Mask group.png";
+import { FormattedMessage } from "react-intl";
+import messages from "./messages.js";
 export const ShowJobOne = () => {
   const images = [
     { src: home10, alt: "", className: "tall", isVertical: true },
@@ -62,28 +64,33 @@ export const ShowJobOne = () => {
       <div className="showWorkContainer">
         <div className="pageContainer">
           <div className="textSection">
-            <p>
-              Программа предоставляет полное представление о местоположении,
-              внешнем виде и окружении строящихся зданий, учитывая время суток,
-              сезоны и погодные условия — от солнечных дней до тумана, дождя и
-              снега. Пользователи могут исследовать двор как от первого лица,
-              так и в формате игры на компьютере, что делает опыт интересным как
-              для родителей, так и для детей. Изучение квартир включает
-              информацию о размерах и планировке типовых квартир, возможность
-              перестановки и изменения цвета мебели, а также обзор видов с
-              балкона. Все эти функции доступны и с использованием VR-очков, что
-              обеспечивает более реалистичное и захватывающее погружение.
-            </p>
-            <ul>
-              <li>Преимущества решения</li>
+            <h1 className="showJobsTitle">
+              <FormattedMessage {...messages.showBildindOneTitle} />
+            </h1>
+            <h3 className="showJobsTitleOne">
+              <FormattedMessage {...messages.showBildindOneTitleOne} />
+            </h3>
+            <ul className="showJobsList">
+              <li>
+                <FormattedMessage {...messages.showBildindOneListOne} />
+              </li>
+              <li>
+                <FormattedMessage {...messages.showBildindOneListTwo} />
+              </li>
+              <li>
+                <FormattedMessage {...messages.showBildindOneListThree} />
+              </li>
             </ul>
-
-            <p>
-              Наше решение позволяет детально изучить строящееся здание, его
-              окрестности и квартиры, обеспечивая полное понимание и уверенность
-              в процессе принятия решений.
-            </p>
+            <div className="showJobsTitleOne">
+              <h3 className="showJobsTitleTwo">
+                <FormattedMessage {...messages.showBildindOneTitleTwo} />
+              </h3>
+              <p className="showJobsParagraph">
+                <FormattedMessage {...messages.showBildindOneParagraph} />
+              </p>
+            </div>
           </div>
+
           <div className="videoSection">
             <iframe
               width="560"
@@ -144,7 +151,10 @@ export const ShowJobOne = () => {
             </div>
           </div>
         )}
+
+        {/* <Footer /> */}
       </div>
+
       <div width="100%" style={{ marginBottom: "-6px" }}>
         <iframe
           src="https://staging.d1hcassa9t972v.amplifyapp.com/"

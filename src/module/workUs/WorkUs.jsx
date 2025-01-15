@@ -3,96 +3,96 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./styles.css";
 import { Footer } from "../../UI/footer/footer";
-
+import { FormattedMessage } from "react-intl";
+import messages from "./messages.js";
 export const WorkUs = () => {
   return (
     <div className="WorkUsContainer">
-      <div className="WorkUsFirstContainer">
-        <span>
-          Мы специализируемся на цифровизации и реализации любых идей, используя
-          передовые технологии. <br />
-          <br />
-        </span>
-        <ul>
+      <div className="textSection">
+        <h1 className="showJobsTitle">
+          <FormattedMessage {...messages.workUsTitle} />
+        </h1>
+        <h3 className="showJobsTitleOne">
+          <FormattedMessage {...messages.workUsTitleOne} />
+        </h3>
+        <ul className="showJobsList">
           <li>
-            Индивидуальные программы и игры для ПК и VR С помощью мощного
-            инструментария Unreal Engine мы создаем фотореалистичную графику,
-            захватывающий пользовательский опыт и эффективные решения для
-            воплощения даже самых сложных проектов.
+            <FormattedMessage {...messages.workUsListOne} />
           </li>
           <li>
-            Приложения для App Store и Play Market Мы разрабатываем динамичные,
-            интуитивно понятные и функциональные приложения, которые идеально
-            соответствуют потребностям вашего бизнеса и ожиданиям пользователей.
+            <FormattedMessage {...messages.workUsListTwo} />
           </li>
           <li>
-            Дизайн и разработка веб-сайтов Мы предлагаем современные и
-            инновационные решения, которые сочетают точный дизайн и передовые
-            технологии, обеспечивая полное отражение особенностей вашего
-            бизнеса.
+            <FormattedMessage {...messages.workUseListThree} />
           </li>
           <li>
-            Ваши идеи — на любом устройстве Мы цифровизируем самые амбициозные
-            идеи, превращая их в функциональные и эффективные решения для любых
-            устройств — от компьютеров до мобильных.
+            <FormattedMessage {...messages.workUseListFoure} />
           </li>
-          <li className="lastParagraph">Преимущества решения</li>
         </ul>
-        <span>
-          Мы объединяем инновации, передовые технологии и индивидуальный подход,
-          чтобы обеспечить высокое качество и уникальные решения. Наша команда
-          предоставляет постоянную техническую поддержку, а индивидуальные
-          программные разработки делают нас надежным партнером на пути
-          превращения ваших идей в цифровую реальность.
-        </span>
+        <div className="showJobsTitleOne">
+          <h3 className="showJobsTitleTwo">
+            <FormattedMessage {...messages.workUsTitleTwo} />
+          </h3>
+          <p className="showJobsParagraph">
+            <FormattedMessage {...messages.workUsParagraph} />
+          </p>
+        </div>
       </div>
+
       <div className="WorkUsTwoContainer">
         <iframe
-          src="https://www.youtube.com/embed/hD_VipQ32Mc?si=br8YsImUR5O9eIfH"
+          className="video"
+          src="https://www.youtube.com/embed/KkmS2Rtb-mw?si=TYYRTbD7lPveX6ED"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
-          className="video"
         ></iframe>
-        <p>
-          Дополненная реальность (Augmented Reality, AR)
-          <br /> Что это <br />
-          Дополненная реальность — это технология, которая добавляет цифровые
-          элементы (объекты, тексты, звуки) в реальный мир, создавая
-          комбинированную среду. Она изменяет окружающее пространство в реальном
-          времени, накладывая цифровые слои на физический мир.
-        </p>
+        <div className="workUsParagraphBox">
+          <h3>
+            <FormattedMessage {...messages.workUsTitleBoxOne} />
+          </h3>
+          <p>
+            <FormattedMessage {...messages.workUsParagraphBox} />
+          </p>
+        </div>
       </div>
 
       <div className="WorkUsThreeContainer">
         <div className="WorkUsThreeList">
+          <h3>
+            <FormattedMessage {...messages.workUsListTitleBox} />
+          </h3>
           <ul>
-            <span className="WorkUsThreeListTitle">Применение</span>
             <li>
-              Образование: Визуализация учебных материалов, таких как 3D-модели.
+              <FormattedMessage {...messages.workUsListParagraphBoxOne} />
             </li>
             <li>
-              Розничная торговля: Возможность «примерить» товары (например,
-              мебель или одежду).
+              <FormattedMessage {...messages.workUsListParagraphBoxTwo} />
             </li>
             <li>
-              Медицина: Используется для подготовки к операциям или обучения.
+              <FormattedMessage {...messages.workUsListParagraphBoxThree} />
             </li>
-            <li>Строительство: Визуализация архитектурных проектов.</li>
-            <li>Игры и развлечения: Например, Pokémon GO.</li>
-            <span className="WorkUsThreeListTitle">
-              Поддерживаемые устройства
-            </span>
-            <li>Смартфоны и планшеты: iPhone (ARKit), Android (ARCore).</li>
-            <li>AR-очки: Magic Leap, Microsoft HoloLens.</li>
-            <li>Проекторы: Lightform.</li>
+            <li>
+              <FormattedMessage {...messages.workUsListParagraphBoxFour} />
+            </li>
+          </ul>
+          <h3>
+            <FormattedMessage {...messages.workUsListTitleBoxOne} />
+          </h3>
+          <ul>
+            <li>
+              <FormattedMessage {...messages.workUsListParagraphBoxFive} />
+            </li>
+            <li>
+              <FormattedMessage {...messages.workUsListParagraphBoxSixe} />
+            </li>
           </ul>
         </div>
         <div>
           <iframe
-            src="https://www.youtube.com/embed/hD_VipQ32Mc?si=br8YsImUR5O9eIfH"
+            src="https://www.youtube.com/embed/Ylp4fmtHA3Q?si=2BXXusVi_nSf_kHP"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -104,70 +104,76 @@ export const WorkUs = () => {
       </div>
       <div className="WorkUsThorContainer">
         <iframe
-          src="https://www.youtube.com/embed/hD_VipQ32Mc?si=br8YsImUR5O9eIfH"
+          className="video"
+          src="https://www.youtube.com/embed/gQeFH_pFg0o?si=RIdFl-heyHgJRXcj"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
-          className="video"
         ></iframe>
         <div className="WorkUsThorParagraphList">
+          <h3>
+            <FormattedMessage {...messages.workUsTitleBoxThree} />
+          </h3>
           <p>
-            Смешанная реальность (Mixed Reality, MR)
-            <br />
-            Что это
-            <br />
-            Что это Смешанная реальность объединяет реальный и виртуальный миры,
-            создавая среду, где цифровые элементы становятся частью физического
-            мира. Пользователь может взаимодействовать как с реальными, так и с
-            цифровыми объектами.
+            <FormattedMessage {...messages.workUsParagraphBoxMR} />
           </p>
-          <span>Применение</span>
-          <ul>
-            <li>Образование и обучение: Виртуальные лаборатории.</li>
-            <li>
-              Дизайн и архитектура: Размещение цифровых проектов в реальной
-              среде.
-            </li>
-            <li>Медицина: Планирование операций.</li>
-            <li>
-              Рабочие пространства: Интеграция цифровых инструментов в реальную
-              среду.
-            </li>
-          </ul>
+
+          <div className="WorkUsThreeList">
+            <h3>
+              <FormattedMessage {...messages.workUsListTitleBox} />
+            </h3>
+            <ul>
+              <li>
+                <FormattedMessage {...messages.workUsParagraphBoxMRList} />
+              </li>
+              <li>
+                <FormattedMessage {...messages.workUsParagraphBoxMRListOne} />
+              </li>
+              <li>
+                <FormattedMessage {...messages.workUsParagraphBoxMRListTwo} />
+              </li>
+              <li>
+                <FormattedMessage {...messages.workUsParagraphBoxMRListThree} />
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <div className="WorkUsFiveContainer">
-        <span>Поддерживаемые устройства</span>
+        <h3>
+          <FormattedMessage {...messages.workUsListTitleBoxOne} />
+        </h3>
         <ul>
-          <li>Microsoft HoloLens: Многофункциональные MR-очки.</li>
-          <li>Magic Leap: Для сложного моделирования.</li>
           <li>
-            Meta Quest Pro: Более доступное решение для смешанной реальности.
+            <FormattedMessage {...messages.workUsListParagraphBoxFive} />
           </li>
           <li>
-            Apple Vision Pro:
-            <br />
-            Устройство нового поколения от Apple, сочетающее возможности AR и VR
-            для образовательных, профессиональных и развлекательных целей.
+            <FormattedMessage {...messages.workUsListParagraphBoxSixe} />
+          </li>
+          <li>
+            <FormattedMessage {...messages.workUsListParagraphBoxSeven} />
+          </li>
+          <li>
+            <FormattedMessage {...messages.workUsListParagraphBoxEight} />
           </li>
         </ul>
       </div>
       <div className="WorkUsSixContainer">
-        <p>
-          Виртуальная реальность (Virtual Reality, VR)
-          <br />
-          Что это
-          <br />
-          Виртуальная реальность создает полностью цифровую,
-          компьютерно-генерируемую среду, где пользователь полностью
-          «переносится» в другой мир, практически без взаимодействия с реальной
-          средой.
-        </p>
+        <div className="vrParagraphBox">
+          <h3>
+            <FormattedMessage {...messages.workUsTitleBoxVRThree} />
+          </h3>
+
+          <p>
+            <FormattedMessage {...messages.workUsParagraphBoxVR} />
+          </p>
+        </div>
+
         <iframe
-          src="https://www.youtube.com/embed/hD_VipQ32Mc?si=br8YsImUR5O9eIfH"
+          src="https://www.youtube.com/embed/xoK96tBQz7I?si=Ybr7EwS3yejY3TDW"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -179,7 +185,7 @@ export const WorkUs = () => {
 
       <div className="WorkUsSevenContainer">
         <iframe
-          src="https://www.youtube.com/embed/hD_VipQ32Mc?si=br8YsImUR5O9eIfH"
+          src="https://www.youtube.com/embed/Z-P6w6BSiLg?si=_YMvABDnMrkubdkg"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -187,59 +193,73 @@ export const WorkUs = () => {
           allowfullscreen
           className="video"
         ></iframe>
-
         <div>
-          <span>Применение</span>
+          <h3>
+            <FormattedMessage {...messages.workUsListTitleBox} />
+          </h3>
           <ul>
-            <li>Игры и развлечения: Полное погружение в виртуальную среду.</li>
-            <li>Образование: Виртуальные лаборатории, симуляции.</li>
-            <li>Медицина: Симуляции операций, психологическая терапия.</li>
-            <li>Инженерия и дизайн: Просмотр моделей в VR-среде.</li>
+            <li>
+              <FormattedMessage {...messages.workUsParagraphBoxVRList} />
+            </li>
+            <li>
+              <FormattedMessage {...messages.workUsParagraphBoxVRListOne} />
+            </li>
+            <li>
+              <FormattedMessage {...messages.workUsParagraphBoxVRListTwo} />
+            </li>
+            <li>
+              <FormattedMessage {...messages.workUsParagraphBoxVRListThree} />
+            </li>
           </ul>
 
-          <span>Поддерживаемые устройства</span>
+          <h3>
+            <FormattedMessage {...messages.workUsListTitleBoxOne} />
+          </h3>
           <ul>
-            <li>Meta Quest 2/Pro: Автономные VR-устройства.</li>
-            <li>HTC Vive: Для профессионального использования.</li>
-            <li>PlayStation VR: Для консольных игр.</li>
-            <li>Valve Index: Для высококачественного игрового опыта.</li>
+            <li>
+              <FormattedMessage {...messages.workUsListParagraphBoxVRFive} />
+            </li>
+            <li>
+              <FormattedMessage {...messages.workUsListParagraphBoxVRSixe} />
+            </li>
+            <li>
+              <FormattedMessage {...messages.workUsListParagraphBoxVRSeven} />
+            </li>
+            <li>
+              <FormattedMessage {...messages.workUsListParagraphBoxVREight} />
+            </li>
           </ul>
         </div>
       </div>
       <div className="WorkUsEightContainer">
         <div>
-          <span>
-            Компьютер: незаменимый инструмент современного дизайна
-            <br />С использованием современных программ, таких как Autodesk 3ds
-            Max, SketchUp, Blender и Unreal Engine, можно:
-          </span>
+          <h3>
+            <FormattedMessage {...messages.workUsTitleBoxPcThree} />
+          </h3>
+          <p>
+            <FormattedMessage {...messages.workUsParagraphBoxPc} />
+          </p>
           <ul>
             <li>
-              Создавать точные и детализированные 3D-модели, включая самые
-              мелкие элементы.
+              <FormattedMessage {...messages.workUsParagraphBoxPcList} />
             </li>
             <li>
-              Планировать размеры и размещение мебели, обеспечивая оптимальные
-              решения и исключая ошибки.
+              <FormattedMessage {...messages.workUsParagraphBoxPcListOne} />
             </li>
             <li>
-              Пробовать различные стили и цветовые сочетания, подбирая лучший
-              вариант для конкретной среды.
+              <FormattedMessage {...messages.workUsParagraphBoxPcListTwo} />
             </li>
             <li>
-              Добавлять функциональность и динамику проектам, делая виртуальное
-              пространство более естественным и интерактивным с помощью Unreal
-              Engine.
+              <FormattedMessage {...messages.workUsParagraphBoxPcListThree} />
             </li>
           </ul>
-          <span>
-            Совмещая эти технологии, вы получаете чёткое представление о проекте
-            ещё до его реализации, что делает процесс дизайна не только
-            эффективным, но и творческим.
-          </span>
+          <p>
+            <FormattedMessage {...messages.workUsParagraphBoxPcLast} />
+          </p>
         </div>
+
         <iframe
-          src="https://www.youtube.com/embed/hD_VipQ32Mc?si=br8YsImUR5O9eIfH"
+          src="https://www.youtube.com/embed/EC_JsJWSCSQ?si=HALVFvGv9W2EMSs9"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

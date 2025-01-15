@@ -1,0 +1,149 @@
+{
+  "navBarListOne": "Home",
+  "navBarListTwo": "About us",
+  "navBarListThree": "Services",
+  "navBarListFour": "Projects",
+  "navBarListFive": "Pages",
+  "navBarListFive1": "For Builders",
+  "navBarListFive2": "For Furniture Stores",
+  "navBarListFive3": "Business Ideas",
+  "navBarListFive4": "BossHunter Game",
+  "navBarListSix": "Contact Us",
+
+  "homePageCourseTitle": "Digitalize Your Idea",
+  "homePageCourseParagraph": "ArchiTek Soft is a company specializing in innovative technologies and offering professional solutions for digitalization across various industries. We transform your ideas, making them visible, interactive, and accessible.",
+
+  "oNasTitle": "About Us",
+  "oNasTitleOne": "Innovative technologies to shape the future of your business",
+  "oNasTitleTwo": "Let’s digitalize the future together.",
+
+  "oNasButtonOne": "Our Team",
+  "oNasButtonOneParagraph": "Our team consists of experienced specialists who continuously work on delivering innovative solutions and meeting our clients' needs in the best possible way. ArchiTek Soft combines innovative technologies and your imagination to bring even the boldest ideas to life.",
+
+  "oNasButtonTwo": "Our Vision",
+  "oNasButtonTwoParagraph": "To become a leading company in AR and VR technologies, unlocking new opportunities for businesses and individuals. Our goal is to make the future a reality today.",
+
+  "oNasButtonThere": "Our Mission",
+
+  "oNasButtonThereParagraph": "To transform traditional approaches by providing interactive, visual, and accessible tools that help businesses better showcase their products and enable customers to make confident decisions before purchasing. ArchiTek Soft is a platform for innovative ideas aimed at enhancing people's lives.",
+
+  "chooseTitle": "Why choose us?",
+  "chooseCardOne": "Innovation \n We create what doesn’t exist yet.",
+  "chooseCardOneTwo": "Client-Centric Approach \n Our solutions are tailored to your specific needs.",
+  "chooseCardOneThere": "Speed and Precision \n We ensure that every project is completed quickly, efficiently, and professionally.",
+  "chooseCardOneFoure": "Professional Growth \n We continuously enhance our skills to stay aligned with technological advancements.",
+
+  "uslogiTitle": "Services",
+
+  "uslogiTitleOne": "Digital Solutions for All",
+
+  "uslogiLisTitleOne": "Real Estate Visualization",
+  "uslogiLisOne": "Virtual experiments with weather, time of day, and lighting changes.",
+  "uslogiLisTwo": "Detailed study of apartment orientation (north-south) and layout.",
+  "uslogiLisThree": "Real-time design changes and furniture arrangement adjustments.",
+  "uslogiLisFhree": "Multifunctional software solutions for computers and other devices.",
+
+  "uslogiLisTitleTwo": "For Furniture Stores",
+  "uslogiLisFive": "Interactive 3D designs with adjustable colors and sizes.",
+  "uslogiLisSix": "Display and customization of furniture models to match customer preferences.",
+  "uslogiLisSeven": "Virtual placement tools to visualize furniture in the client’s space.",
+
+  "uslogiLisTitleThree": "Custom Solutions",
+  "uslogiLisEight": "Digital solutions for any purpose, from apps to business tools.",
+  "uslogiLisNine": "Virtual experiments and interactive programs compatible with all devices.",
+  "uslogiLisThen": "Innovative software to bring any idea to life.",
+
+  "projectsTitle": "projects",
+  "projectsCardPharagrapOne": "BossHunter VR is the first version of the game where players will have to fight many interesting opponents, use multiple weapons, and a unique mechanic.",
+
+  "projectsCardPharagrapThou": "A dynamic experience for exploring buildings under construction, typical apartments and the surrounding area, including the ability to view with VR glasses.",
+  "projectsCardPharagrapThree": "Dynamic furniture design software with the ability to explore different models and colors, open drawers and order custom solutions through virtual reality (VR).",
+  "projectsCardPharagrapFoure": "Comprehensive software solutions for all industries, from business tools to innovative games and applications tailored to your needs and goals.",
+
+  "showBildindTitle": "Real Estate Visualization",
+  "showBildindTitleOne": "Key Features of the Program",
+
+  "showBildindListOne": "Detailed exploration of buildings under construction, apartments, and surrounding areas, including their location, appearance, and infrastructure.",
+
+  "showBildindListTwo": "Visualization of changes in time of day (day, night) and weather conditions (sunny, foggy, snowy).",
+
+  "showBildindListThree": "Game mode option to explore the yard or area from a first-person perspective.",
+
+  "showBildindListFoure": "Interactive examination of apartments, including dimensions, layout, furniture placement, and rearrangement.",
+
+  "showBildindListFive": "Virtual reality (VR) integration for a more realistic and immersive experience.",
+  "showBildindTitleTwo": "Advantages",
+  "showBildindParagraph": "Our solution allows for a comprehensive study of the building under construction, apartments, and surroundings, providing clarity and confidence in decision-making.",
+
+  "showBildindOneTitle": "Furniture Design Visualization",
+  "showBildindOneTitleOne": "Key Features of the Program",
+
+  "showBildindOneListOne": "Users can interactively adjust furniture dimensions and colors, exploring various models and designs.",
+  "showBildindOneListTwo": "Ability to open drawers and examine the internal structure of furniture, such as the contents of cabinets or desks.",
+  "showBildindOneListThree": "Visual placement of furniture in real spaces using VR technology.",
+  "showBildindOneTitleTwo": "Advantages",
+  "showBildindOneParagraph": "Our solution helps avoid errors, saves time, and simplifies the furniture selection process by providing a clear understanding before placing an order.",
+
+  "workUsTitle": "Digital Technologies and Custom Solutions",
+  "workUsTitleOne": "Applications and Games",
+  "workUsListOne": "Customized Programs & Games for PC and VR Using the powerful Unreal Engine toolset, we create photorealistic graphics, immersive user experiences, and effective solutions to bring even the most complex projects to life.",
+  "workUsListTwo": "Apps for App Store and Play Market: We develop intuitive, functional and dynamic apps that meet your business needs.",
+  "workUseListThree": "Website design and development We offer modern and innovative solutions that combine precise design and cutting-edge technology, fully reflecting your business.",
+
+  "workUseListFoure": "Your ideas - on any device We digitize the most ambitious ideas, turning them into functional and effective solutions for any device - from computers to mobile.",
+  "workUsTitleTwo": "Advantages",
+  "workUsParagraph": "We combine innovation, cutting-edge technology and a personalized approach to deliver high quality and unique solutions. Our team provides ongoing technical support, and our customized software development makes us a reliable partner on the path of turning your ideas into digital reality.",
+
+  "workUsTitleBoxOne": "Augmented Reality (AR)",
+  "workUsTitleBoxTwo": "What it is",
+  "workUsParagraphBox": "Augmented Reality is a technology that adds digital elements (objects, texts, sounds) to the real world, creating a combined environment. It changes the environment in real time by superimposing digital layers on the physical world.",
+
+  "workUsListTitleBox": "Application",
+  "workUsListParagraphBoxOne": "Education: Visualization of educational materials such as 3D models.",
+  "workUsListParagraphBoxTwo": "Retail: Ability to “try on” products (such as furniture or clothing)",
+  "workUsListParagraphBoxThree": "Medical: Used for surgical preparation or training.",
+  "workUsListParagraphBoxFour": "Construction: Visualize architectural designs.",
+
+  "workUsTitleBoxThree": "Mixed Reality (MR)",
+  "workUsParagraphBoxMR": "Mixed Reality combines the real and virtual worlds, creating an environment where digital elements become part of the physical world. The user can interact with both real and digital objects.",
+  "workUsParagraphBoxMRList": "Education and training: Virtual laboratories.",
+  "workUsParagraphBoxMRListOne": "Design and Architecture: Placing digital projects in real environments.",
+  "workUsParagraphBoxMRListTwo": "Medicine: Planning operations.",
+  "workUsParagraphBoxMRListThree": "Workspaces: Integrating digital tools into real environments.",
+
+  "workUsListTitleBoxOne": "Supported devices",
+  "workUsListParagraphBoxFive": "Microsoft HoloLens: Multifunctional MR glasses.",
+  "workUsListParagraphBoxSixe": "Magic Leap: For sophisticated modeling.",
+  "workUsListParagraphBoxSeven": "Meta Quest Pro: A more affordable mixed reality solution.",
+  "workUsListParagraphBoxEight": "Apple Vision Pro: Apple's next-generation device that combines AR and VR capabilities for educational, professional and entertainment purposes.",
+
+  "workUsTitleBoxVRThree": "Virtual Reality (VR)",
+  "workUsParagraphBoxVR": "Virtual Reality creates a fully digital, computer-generated environment where the user is completely “transported” to another world, with little or no interaction with the real world.",
+
+  "workUsParagraphBoxVRList": "Gaming and Entertainment: Fully immersive virtual environments.",
+  "workUsParagraphBoxVRListOne": "Education: Virtual laboratories, simulations.",
+  "workUsParagraphBoxVRListTwo": "Medicine: Surgery simulations, psychological therapies.",
+  "workUsParagraphBoxVRListThree": "Engineering and design: View models in a VR environment.",
+
+  "workUsListParagraphBoxVRFive": "Meta Quest 2/Pro: Standalone VR devices.",
+  "workUsListParagraphBoxVRSixe": "HTC Vive: For professional use.",
+  "workUsListParagraphBoxVRSeven": "PlayStation VR: For console gaming.",
+  "workUsListParagraphBoxVREight": "Valve Index: For a high-quality gaming experience.",
+
+  "workUsTitleBoxPcThree": "Computer: an indispensable tool for modern design.",
+  "workUsParagraphBoxPc": "Using modern programs such as Autodesk 3ds Max, SketchUp, Blender and Unreal Engine, you can.",
+  "workUsParagraphBoxPcList": "Create accurate and detailed 3D models, including the smallest elements.",
+  "workUsParagraphBoxPcListOne": "Plan the size and placement of furniture, ensuring optimal solutions and eliminating errors.",
+  "workUsParagraphBoxPcListTwo": "Try different styles and color combinations, selecting the best option for a particular environment.",
+  "workUsParagraphBoxPcListThree": "Add functionality and dynamics to projects, making virtual spaces more natural and interactive with Unreal Engine.",
+  "workUsParagraphBoxPcLast": "By combining these technologies, you get a clear picture of the project before it is realized, making the design process not only efficient but also creative.",
+
+  "footer": "We create tools that transform business processes, delivering speed and profitability growth.",
+
+  "footerLink": "Links",
+  "footerContactInfo": "Contact Information",
+  "footerAddress": "Address",
+  "footerContactInfoAddress": "12 Shinararneri str, Vanadzor, Armenia",
+  "footerMail": "Email",
+  "footerPhone": "Phone"
+}

@@ -15,6 +15,9 @@ import home8 from "./img/Img_7.png";
 import home9 from "./img/Img_8.png";
 import home10 from "./img/Img_9-1.png";
 import home11 from "./img/Img_9.png";
+
+import { FormattedMessage } from "react-intl";
+import messages from "./messages.js";
 export const ShowJob = () => {
   const images = [
     { src: home3, alt: "", className: "tall imgCenter", isVertical: true },
@@ -58,27 +61,37 @@ export const ShowJob = () => {
       <div className="showWorkContainer">
         <div className="pageContainer">
           <div className="textSection">
-            <p>
-              Программа предоставляет полное представление о местоположении,
-              внешнем виде и окружении строящихся зданий, учитывая время суток,
-              сезоны и погодные условия — от солнечных дней до тумана, дождя и
-              снега. Пользователи могут исследовать двор как от первого лица,
-              так и в формате игры на компьютере, что делает опыт интересным как
-              для родителей, так и для детей. Изучение квартир включает
-              информацию о размерах и планировке типовых квартир, возможность
-              перестановки и изменения цвета мебели, а также обзор видов с
-              балкона. Все эти функции доступны и с использованием VR-очков, что
-              обеспечивает более реалистичное и захватывающее погружение.
-            </p>
-            <ul>
-              <li>Преимущества решения</li>
+            <h1 className="showJobsTitle">
+              <FormattedMessage {...messages.showBildindTitle} />
+            </h1>
+            <h3 className="showJobsTitleOne">
+              <FormattedMessage {...messages.showBildindTitleOne} />
+            </h3>
+            <ul className="showJobsList">
+              <li>
+                <FormattedMessage {...messages.showBildindListOne} />
+              </li>
+              <li>
+                <FormattedMessage {...messages.showBildindListTwo} />
+              </li>
+              <li>
+                <FormattedMessage {...messages.showBildindListThree} />
+              </li>
+              <li>
+                <FormattedMessage {...messages.showBildindListFoure} />
+              </li>
+              <li>
+                <FormattedMessage {...messages.showBildindListFive} />
+              </li>
             </ul>
-
-            <p>
-              Наше решение позволяет детально изучить строящееся здание, его
-              окрестности и квартиры, обеспечивая полное понимание и уверенность
-              в процессе принятия решений.
-            </p>
+            <div className="showJobsTitleOne">
+              <h3 className="showJobsTitleTwo">
+                <FormattedMessage {...messages.showBildindTitleTwo} />
+              </h3>
+              <p className="showJobsParagraph">
+                <FormattedMessage {...messages.showBildindParagraph} />
+              </p>
+            </div>
           </div>
           <div className="videoSection">
             <iframe
@@ -105,6 +118,35 @@ export const ShowJob = () => {
             ))}
           </div>
         </div>
+
+        {/* {currentImageIndex !== null && (
+        <div className="modas" onClick={handleCloseModal}>
+          <div className="modal-content">
+            <img
+              src={images[currentImageIndex].src}
+              alt={images[currentImageIndex].alt}
+            />
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handlePrevImage();
+              }}
+              className="prev-btn"
+            >
+              &#10094;
+            </button>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleNextImage();
+              }}
+              className="next-btn"
+            >
+              &#10095;
+            </button>
+          </div>
+        </div>
+      )} */}
         {currentImageIndex !== null && (
           <div className="modas" onClick={handleCloseModal}>
             <div
@@ -139,6 +181,8 @@ export const ShowJob = () => {
             </div>
           </div>
         )}
+
+        {/* <Footer /> */}
       </div>
       <div width="100%" style={{ marginBottom: "-6px" }}>
         <iframe
