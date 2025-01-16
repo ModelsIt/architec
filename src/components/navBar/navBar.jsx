@@ -15,13 +15,11 @@ export const NavBar = ({ onContactClick, changeLanguage }) => {
   console.log("-=-lang-=-:", lang);
   const [isOpen, setIsOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState(() => {
-    if (lang === "en") {
-      return en;
-    } else if (lang === "hy") {
+    if (lang === "hy") {
       return am;
     } else if (lang === "ru") {
       return ru;
-    }
+    } else return en;
   });
   const buttonRef = useRef(null);
 
