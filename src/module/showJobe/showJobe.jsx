@@ -187,8 +187,7 @@ export const ShowJob = () => {
       </div>
       <div width="100%" style={{ marginBottom: "-6px" }} className="blokNone">
         <iframe
-          // src="http://127.0.0.1:5500"
-          src="https://staging.d1hcassa9t972v.amplifyapp.com"
+          src="https://staging.d1ss4lkbf31qbd.amplifyapp.com/"
           frameborder="0"
           width={"100%"}
           height={"600px"}

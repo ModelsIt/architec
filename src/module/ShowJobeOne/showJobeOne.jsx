@@ -161,7 +161,7 @@ export const ShowJobOne = () => {
       <div width="100%" style={{ marginBottom: "-6px" }}>
         <iframe
           className="blokNone"
-          src="https://staging.d1hcassa9t972v.amplifyapp.com/"
+          src="https://staging.d1gubevygh3b3w.amplifyapp.com/"
           frameborder="0"
           width={"100%"}
           height={"600px"}
