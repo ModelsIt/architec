@@ -15,11 +15,13 @@ export const NavBar = ({ onContactClick, changeLanguage }) => {
   console.log("-=-lang-=-:", lang);
   const [isOpen, setIsOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState(() => {
-    if (lang === "hy") {
+    if (lang === "en") {
+      return en;
+    } else if (lang === "hy") {
       return am;
     } else if (lang === "ru") {
       return ru;
-    } else return en;
+    }
   });
   const buttonRef = useRef(null);
 
@@ -39,28 +41,25 @@ export const NavBar = ({ onContactClick, changeLanguage }) => {
           </NavLink>
         </div>
         <div className="w-100 h-100">
-          <div
-            className="topbar px-0 py-2 d-none d-lg-block"
-            style={{ height: "45px" }}
-          >
+          <div className="topbar px-0 py-2 d-none d-lg-block">
             <div className="row gx-0 align-items-center">
               <div className="col-lg-8 text-center text-lg-center mb-lg-0">
                 <div className="d-flex flex-wrap">
-                  <div className="pe-4">
+                  {/* <div className="pe-4">
                     <NavLink to="#" className="text-muted small">
                       <i className="fas fa-envelope text-primary me-2"></i>
                       architeksoft@gmail.com
                     </NavLink>
-                  </div>
-                  <div className="pe-0">
+                  </div> */}
+                  {/* <div className="pe-0">
                     <NavLink to="#" className="text-muted small">
                       <i className="fa fa-clock text-primary me-2"></i>Mon -
                       Sat: 9.00 am-7.00 pm
                     </NavLink>
-                  </div>
+                  </div> */}
                 </div>
               </div>
-              <div className="col-lg-4 text-center text-lg-end">
+              {/* <div className="col-lg-4 text-center text-lg-end">
                 <div className="d-flex justify-content-end">
                   <div className="d-flex pe-3">
                     <NavLink
@@ -93,10 +92,18 @@ export const NavBar = ({ onContactClick, changeLanguage }) => {
                     </NavLink>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
-          <div className="nav-bar px-0 py-lg-0" style={{ height: "80px" }}>
+          <div
+            className="nav-bar px-0 py-lg-0"
+            style={{
+              height: "80px",
+              display: "flex",
+              background: "#100d0d",
+              justifyContent: "space-between",
+            }}
+          >
             <nav className="navbar navbar-expand-lg navbar-light d-flex justify-content-lg-end">
               <NavLink to="#" className="navbar-brand-2">
                 <img src={logo} alt="logo" className="logo" />
@@ -123,6 +130,15 @@ export const NavBar = ({ onContactClick, changeLanguage }) => {
                   <NavLink to="/Проекты" className="nav-item nav-link">
                     <FormattedMessage {...messages.navBarListFour} />
                   </NavLink>
+
+                  <button
+                    to="Связаться с нами"
+                    className="nav-item nav-link"
+                    onClick={onContactClick}
+                  >
+                    <FormattedMessage {...messages.navBarListSix} />
+                  </button>
+
                   <div className="nav-item dropdown">
                     <NavLink
                       to="#"
@@ -133,7 +149,7 @@ export const NavBar = ({ onContactClick, changeLanguage }) => {
                         <FormattedMessage {...messages.navBarListFive} />
                       </span>
                     </NavLink>
-                    <div className="dropdown-menu">
+                    <div className="dropdown-menu dropMenus">
                       <NavLink to="/showJob" className="dropdown-item">
                         <FormattedMessage {...messages.navBarListFive1} />
                       </NavLink>
@@ -153,81 +169,73 @@ export const NavBar = ({ onContactClick, changeLanguage }) => {
                       </NavLink>
                     </div>
                   </div>
-                  <button
-                    to="Связаться с нами"
-                    className="nav-item nav-link"
-                    onClick={onContactClick}
-                  >
-                    <FormattedMessage {...messages.navBarListSix} />
-                  </button>
-                </div>
-              </div>
-              <div>
-                {/* Button to Open Modal */}
-                <button
-                  ref={buttonRef}
-                  className="toggle-btn"
-                  onClick={toggleModal}
-                >
-                  <img
-                    src={currentLanguage}
-                    alt="Current Language"
-                    className="languageImg"
-                  />
-                </button>
-
-                {/* Modal */}
-                <div
-                  className={`modal-container ${isOpen ? "open" : ""}`}
-                  // style={{
-                  //   position: "absolute",
-                  //   top: 85,
-                  //   left: 895,
-                  //   display: isOpen ? "block" : "none",
-                  // }}
-
-                  style={{
-                    position: "fixed",
-                    top: "20%",
-                    left: "82%",
-                    transform: "translate(-50%, -20%)",
-                    display: isOpen ? "block" : "none",
-                  }}
-                >
-                  <div className="modal-content">
-                    <div className="language-options">
-                      <button
-                        onClick={() => {
-                          changeLanguage("en");
-                          setCurrentLanguage(en);
-                          toggleModal();
-                        }}
-                      >
-                        <img src={en} alt="English" />
-                      </button>
-                      <button
-                        onClick={() => {
-                          changeLanguage("hy");
-                          setCurrentLanguage(am);
-                          toggleModal();
-                        }}
-                      >
-                        <img src={am} alt="Armenian" />
-                      </button>
-                      <button
-                        onClick={() => {
-                          changeLanguage("ru");
-                          setCurrentLanguage(ru);
-                          toggleModal();
-                        }}
-                      >
-                        <img src={ru} alt="Russian" />
-                      </button>
-                    </div>
-                  </div>
                 </div>
               </div>
             </nav>
+            <div className="languageToggle">
+              <button
+                ref={buttonRef}
+                className="toggle-btn"
+                onClick={toggleModal}
+              >
+                <img
+                  src={currentLanguage}
+                  alt="Current Language"
+                  className="languageImg"
+                />
+              </button>
+
+              {/* Modal */}
+              <div
+                className={`modal-container ${isOpen ? "open" : ""}`}
+                // style={{
+                //   position: "absolute",
+                //   top: 85,
+                //   left: 895,
+                //   display: isOpen ? "block" : "none",
+                // }}
+
+                style={{
+                  position: "fixed",
+                  top: "20%",
+                  left: "82%",
+                  transform: "translate(-50%, -20%)",
+                  display: isOpen ? "block" : "none",
+                }}
+              >
+                <div className="modal-content">
+                  <div className="language-options">
+                    <button
+                      onClick={() => {
+                        changeLanguage("en");
+                        setCurrentLanguage(en);
+                        toggleModal();
+                      }}
+                    >
+                      <img src={en} alt="English" />
+                    </button>
+                    <button
+                      onClick={() => {
+                        changeLanguage("hy");
+                        setCurrentLanguage(am);
+                        toggleModal();
+                      }}
+                    >
+                      <img src={am} alt="Armenian" />
+                    </button>
+                    <button
+                      onClick={() => {
+                        changeLanguage("ru");
+                        setCurrentLanguage(ru);
+                        toggleModal();
+                      }}
+                    >
+                      <img src={ru} alt="Russian" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

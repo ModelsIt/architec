@@ -26,4 +26,8 @@ export default defineMessages({
     defaultMessage:
       "Comprehensive software solutions for all industries, from business tools to innovative games and applications tailored to your needs and goals.",
   },
+  projectsCardButton: {
+    id: "projectsCardButton",
+    defaultMessage: "Read more",
+  },
 });

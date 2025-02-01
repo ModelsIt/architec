@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./styles.css";
@@ -12,43 +12,50 @@ export const WorkUs = () => {
         <h1 className="showJobsTitle">
           <FormattedMessage {...messages.workUsTitle} />
         </h1>
-        <h3 className="showJobsTitleOne">
-          <FormattedMessage {...messages.workUsTitleOne} />
-        </h3>
-        <ul className="showJobsList">
-          <li>
-            <FormattedMessage {...messages.workUsListOne} />
-          </li>
-          <li>
-            <FormattedMessage {...messages.workUsListTwo} />
-          </li>
-          <li>
-            <FormattedMessage {...messages.workUseListThree} />
-          </li>
-          <li>
-            <FormattedMessage {...messages.workUseListFoure} />
-          </li>
-        </ul>
-        <div className="showJobsTitleOne">
-          <h3 className="showJobsTitleTwo">
-            <FormattedMessage {...messages.workUsTitleTwo} />
-          </h3>
-          <p className="showJobsParagraph">
-            <FormattedMessage {...messages.workUsParagraph} />
-          </p>
+
+        <div className="showJobsListContainer">
+          <div className="showJobsTitleList">
+            <h3 className="showJobsTitleOne">
+              <FormattedMessage {...messages.workUsTitleOne} />
+            </h3>
+            <ul className="showJobsList">
+              <li>
+                <FormattedMessage {...messages.workUsListOne} />
+              </li>
+              <li>
+                <FormattedMessage {...messages.workUsListTwo} />
+              </li>
+              <li>
+                <FormattedMessage {...messages.workUseListThree} />
+              </li>
+              <li>
+                <FormattedMessage {...messages.workUseListFoure} />
+              </li>
+            </ul>
+          </div>
+          <div className="showJobsParagraphOne">
+            <h3 className="showJobsTitleTwo">
+              <FormattedMessage {...messages.workUsTitleTwo} />
+            </h3>
+            <p className="showJobsParagraph">
+              <FormattedMessage {...messages.workUsParagraph} />
+            </p>
+          </div>
         </div>
       </div>
 
       <div className="WorkUsTwoContainer">
-        <iframe
-          className="video"
-          src="https://www.youtube.com/embed/KkmS2Rtb-mw?si=TYYRTbD7lPveX6ED"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+        <div className="videoIfrem">
+          <iframe
+            className="video"
+            src="https://www.youtube.com/embed/KkmS2Rtb-mw?si=TYYRTbD7lPveX6ED"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
         <div className="workUsParagraphBox">
           <h3>
             <FormattedMessage {...messages.workUsTitleBoxOne} />
@@ -90,7 +97,7 @@ export const WorkUs = () => {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="threeBoxVideo">
           <iframe
             src="https://www.youtube.com/embed/Ylp4fmtHA3Q?si=2BXXusVi_nSf_kHP"
             title="YouTube video player"
@@ -103,15 +110,37 @@ export const WorkUs = () => {
         </div>
       </div>
       <div className="WorkUsThorContainer">
-        <iframe
-          className="video"
-          src="https://www.youtube.com/embed/gQeFH_pFg0o?si=RIdFl-heyHgJRXcj"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+        <div className="videoIfrem">
+          <iframe
+            className="video"
+            src="https://www.youtube.com/embed/gQeFH_pFg0o?si=RIdFl-heyHgJRXcj"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+
+          <div className="WorkUsFiveContainer">
+            <h3>
+              <FormattedMessage {...messages.workUsListTitleBoxOne} />
+            </h3>
+            <ul>
+              <li>
+                <FormattedMessage {...messages.workUsListParagraphBoxFive} />
+              </li>
+              <li>
+                <FormattedMessage {...messages.workUsListParagraphBoxSixe} />
+              </li>
+              <li>
+                <FormattedMessage {...messages.workUsListParagraphBoxSeven} />
+              </li>
+              <li>
+                <FormattedMessage {...messages.workUsListParagraphBoxEight} />
+              </li>
+            </ul>
+          </div>
+        </div>
         <div className="WorkUsThorParagraphList">
           <h3>
             <FormattedMessage {...messages.workUsTitleBoxThree} />
@@ -120,7 +149,7 @@ export const WorkUs = () => {
             <FormattedMessage {...messages.workUsParagraphBoxMR} />
           </p>
 
-          <div className="WorkUsThreeList">
+          <div className="WorkUsForeList">
             <h3>
               <FormattedMessage {...messages.workUsListTitleBox} />
             </h3>
@@ -141,26 +170,6 @@ export const WorkUs = () => {
           </div>
         </div>
       </div>
-
-      <div className="WorkUsFiveContainer">
-        <h3>
-          <FormattedMessage {...messages.workUsListTitleBoxOne} />
-        </h3>
-        <ul>
-          <li>
-            <FormattedMessage {...messages.workUsListParagraphBoxFive} />
-          </li>
-          <li>
-            <FormattedMessage {...messages.workUsListParagraphBoxSixe} />
-          </li>
-          <li>
-            <FormattedMessage {...messages.workUsListParagraphBoxSeven} />
-          </li>
-          <li>
-            <FormattedMessage {...messages.workUsListParagraphBoxEight} />
-          </li>
-        </ul>
-      </div>
       <div className="WorkUsSixContainer">
         <div className="vrParagraphBox">
           <h3>
@@ -171,29 +180,33 @@ export const WorkUs = () => {
             <FormattedMessage {...messages.workUsParagraphBoxVR} />
           </p>
         </div>
-
-        <iframe
-          src="https://www.youtube.com/embed/xoK96tBQz7I?si=Ybr7EwS3yejY3TDW"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-          className="video"
-        ></iframe>
+        <div className="WorkUsSixVideo">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/I7ZQV-qiAPM?si=77YdEJwW-m-O3y2a"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
-
       <div className="WorkUsSevenContainer">
-        <iframe
-          src="https://www.youtube.com/embed/Z-P6w6BSiLg?si=_YMvABDnMrkubdkg"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-          className="video"
-        ></iframe>
-        <div>
+        <div className="WorkUsSevenVideo">
+          <iframe
+            src="https://www.youtube.com/embed/Z-P6w6BSiLg?si=_YMvABDnMrkubdkg"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            className="video"
+          ></iframe>
+        </div>
+
+        <div className="WorkUsSevenParagraph">
           <h3>
             <FormattedMessage {...messages.workUsListTitleBox} />
           </h3>
@@ -231,8 +244,9 @@ export const WorkUs = () => {
           </ul>
         </div>
       </div>
+
       <div className="WorkUsEightContainer">
-        <div>
+        <div className="WorkUsEightParagraph">
           <h3>
             <FormattedMessage {...messages.workUsTitleBoxPcThree} />
           </h3>
@@ -257,16 +271,17 @@ export const WorkUs = () => {
             <FormattedMessage {...messages.workUsParagraphBoxPcLast} />
           </p>
         </div>
-
-        <iframe
-          src="https://www.youtube.com/embed/EC_JsJWSCSQ?si=HALVFvGv9W2EMSs9"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-          className="video"
-        ></iframe>
+        <div className="WorkUsEightVideo">
+          <iframe
+            src="https://www.youtube.com/embed/EC_JsJWSCSQ?si=HALVFvGv9W2EMSs9"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            className="video"
+          ></iframe>
+        </div>
       </div>
       {/* <Footer /> */}
     </div>

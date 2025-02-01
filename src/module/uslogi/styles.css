@@ -1,6 +1,6 @@
 .uslogiContainer {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 
 .uslogiContainerBox {
@@ -82,3 +82,95 @@
   padding-top: 20px;
   background: black;
 }
+
+@media screen and (max-width: 1700px) {
+  .uslogiInfo h1,
+  .uslogiInfo h2 {
+    text-align: center;
+    margin: unset;
+  }
+
+  .uslogiList {
+    font-size: 15px;
+  }
+
+  .uslogiList h4 {
+    margin: 20px 0;
+    font-size: 15px;
+  }
+
+  .uslogiList ul li {
+    font-size: 15px;
+    color: #d6d7d8;
+  }
+}
+@media screen and (max-width: 1650px) {
+  .uslogiList ul li {
+    font-size: 13px;
+    color: #d6d7d8;
+  }
+}
+@media screen and (max-width: 1550px) {
+  .uslogiList ul li {
+    font-size: 13px;
+    color: #d6d7d8;
+  }
+  .uslogiImgOne.visibleUslogi {
+    display: none;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .uslogiContainerBox {
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .uslogiList {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 788px) {
+  .uslogiInfo h1,
+  .uslogiInfo h2 {
+    text-align: center;
+    margin: unset;
+    padding-left: 20px;
+  }
+
+  .uslogiList {
+    font-size: 15px;
+  }
+
+  .uslogiList h4 {
+    margin: 20px 0;
+    font-size: 15px;
+    padding-left: 17px;
+  }
+
+  .uslogiList ul li {
+    font-size: 11px;
+    color: #d6d7d8;
+  }
+}
+/* @media screen and (max-width: 400px) {
+  .uslogiInfo h1,
+  .uslogiInfo h2 {
+    text-align: center;
+    margin: unset;
+  }
+
+  .uslogiList {
+    font-size: 15px;
+  }
+
+  .uslogiList h4 {
+    margin: 20px 0;
+    font-size: 15px;
+  }
+
+  .uslogiList ul li {
+    font-size: 11px;
+    color: #d6d7d8;
+  }
+} */

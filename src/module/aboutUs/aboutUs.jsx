@@ -63,7 +63,7 @@ function CustomNext(props) {
         background: "black",
         position: "relative",
         zIndex: 2,
-        top: 50,
+        top: 559,
         left: 600,
         fontSize: 26,
         color: "white",
@@ -158,21 +158,18 @@ export const AboutUs = () => {
                 onClick={() => setActiveButtonIndex(1)}
               >
                 <FormattedMessage {...messages.oNasButtonOne} />
-                <div className="buttonTitle"> </div>
               </div>
               <div
                 className={`button ${activeButtonIndex === 2 ? "active" : ""}`}
                 onClick={() => setActiveButtonIndex(2)}
               >
                 <FormattedMessage {...messages.oNasButtonTwo} />
-                <div className="buttonTitle"> </div>
               </div>
               <div
                 className={`button ${activeButtonIndex === 3 ? "active" : ""}`}
                 onClick={() => setActiveButtonIndex(3)}
               >
                 <FormattedMessage {...messages.oNasButtonThere} />
-                <div className="buttonTitle"> </div>
               </div>
             </div>
             <div className="linel"></div>
@@ -180,9 +177,6 @@ export const AboutUs = () => {
               <p>{paragraphs[activeButtonIndex - 1]}</p>
             </div>
             <div className="linel"></div>
-            {/* <div className="buttonMakeAppointment">
-                     <div className="buttonTitle">Make Appointment</div>
-                   </div> */}
           </div>
           <img
             src={img4}
@@ -223,7 +217,24 @@ export const AboutUs = () => {
                   setActiveButton={setActiveButton}
                 />
               ),
+              responsive: [
+                {
+                  breakpoint: 1200,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                  },
+                },
+                {
+                  breakpoint: 600, // 600px-ից ներքև
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  },
+                },
+              ],
             }}
+            className="slick1"
           >
             {slidesOne.map((slide, index) => (
               <div

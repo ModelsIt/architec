@@ -64,35 +64,38 @@ export const ShowJob = () => {
             <h1 className="showJobsTitle">
               <FormattedMessage {...messages.showBildindTitle} />
             </h1>
-            <h3 className="showJobsTitleOne">
-              <FormattedMessage {...messages.showBildindTitleOne} />
-            </h3>
-            <ul className="showJobsList">
-              <li>
-                <FormattedMessage {...messages.showBildindListOne} />
-              </li>
-              <li>
-                <FormattedMessage {...messages.showBildindListTwo} />
-              </li>
-              <li>
-                <FormattedMessage {...messages.showBildindListThree} />
-              </li>
-              <li>
-                <FormattedMessage {...messages.showBildindListFoure} />
-              </li>
-              <li>
-                <FormattedMessage {...messages.showBildindListFive} />
-              </li>
-            </ul>
-            <div className="showJobsTitleOne">
-              <h3 className="showJobsTitleTwo">
-                <FormattedMessage {...messages.showBildindTitleTwo} />
+            <div className="showJobParagraphBox">
+              <h3 className="showJobsTitleOne">
+                <FormattedMessage {...messages.showBildindTitleOne} />
               </h3>
-              <p className="showJobsParagraph">
-                <FormattedMessage {...messages.showBildindParagraph} />
-              </p>
+              <ul className="showJobsList">
+                <li>
+                  <FormattedMessage {...messages.showBildindListOne} />
+                </li>
+                <li>
+                  <FormattedMessage {...messages.showBildindListTwo} />
+                </li>
+                <li>
+                  <FormattedMessage {...messages.showBildindListThree} />
+                </li>
+                <li>
+                  <FormattedMessage {...messages.showBildindListFoure} />
+                </li>
+                <li>
+                  <FormattedMessage {...messages.showBildindListFive} />
+                </li>
+              </ul>
+              <div className="showJobsTitleOne">
+                <h3 className="showJobsTitleTwo">
+                  <FormattedMessage {...messages.showBildindTitleTwo} />
+                </h3>
+                <p className="showJobsParagraph">
+                  <FormattedMessage {...messages.showBildindParagraph} />
+                </p>
+              </div>
             </div>
           </div>
+
           <div className="videoSection">
             <iframe
               width="560"
@@ -181,10 +184,8 @@ export const ShowJob = () => {
             </div>
           </div>
         )}
-
-        {/* <Footer /> */}
       </div>
-      <div width="100%" style={{ marginBottom: "-6px" }}>
+      <div width="100%" style={{ marginBottom: "-6px" }} className="blokNone">
         <iframe
           // src="http://127.0.0.1:5500"
           src="https://staging.d1hcassa9t972v.amplifyapp.com"

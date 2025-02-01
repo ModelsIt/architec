@@ -67,27 +67,30 @@ export const ShowJobOne = () => {
             <h1 className="showJobsTitle">
               <FormattedMessage {...messages.showBildindOneTitle} />
             </h1>
-            <h3 className="showJobsTitleOne">
-              <FormattedMessage {...messages.showBildindOneTitleOne} />
-            </h3>
-            <ul className="showJobsList">
-              <li>
-                <FormattedMessage {...messages.showBildindOneListOne} />
-              </li>
-              <li>
-                <FormattedMessage {...messages.showBildindOneListTwo} />
-              </li>
-              <li>
-                <FormattedMessage {...messages.showBildindOneListThree} />
-              </li>
-            </ul>
-            <div className="showJobsTitleOne">
-              <h3 className="showJobsTitleTwo">
-                <FormattedMessage {...messages.showBildindOneTitleTwo} />
+
+            <div className="showJobParagraphBox">
+              <h3 className="showJobsTitleOne">
+                <FormattedMessage {...messages.showBildindOneTitleOne} />
               </h3>
-              <p className="showJobsParagraph">
-                <FormattedMessage {...messages.showBildindOneParagraph} />
-              </p>
+              <ul className="showJobsList">
+                <li>
+                  <FormattedMessage {...messages.showBildindOneListOne} />
+                </li>
+                <li>
+                  <FormattedMessage {...messages.showBildindOneListTwo} />
+                </li>
+                <li>
+                  <FormattedMessage {...messages.showBildindOneListThree} />
+                </li>
+              </ul>
+              <div className="showJobsTitleOne">
+                <h3 className="showJobsTitleTwo">
+                  <FormattedMessage {...messages.showBildindOneTitleTwo} />
+                </h3>
+                <p className="showJobsParagraph">
+                  <FormattedMessage {...messages.showBildindOneParagraph} />
+                </p>
+              </div>
             </div>
           </div>
 
@@ -157,6 +160,7 @@ export const ShowJobOne = () => {
 
       <div width="100%" style={{ marginBottom: "-6px" }}>
         <iframe
+          className="blokNone"
           src="https://staging.d1hcassa9t972v.amplifyapp.com/"
           frameborder="0"
           width={"100%"}

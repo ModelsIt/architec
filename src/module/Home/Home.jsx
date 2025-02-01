@@ -313,6 +313,8 @@ export const Home = () => {
   const [activeButton, setActiveButton] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isVisibleUslogi, setIsVisibleUslogi] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 1100);
+
   const aboutInfoBoxRef = useRef(null);
   const uslogiRef = useRef(null);
 
@@ -360,31 +362,43 @@ export const Home = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 1100);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
     arrows: true,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
     fade: true,
+    swipe: !isMobileView,
+    draggable: !isMobileView,
   };
   return (
     <div>
       <div className="carousel-container">
-        <Slider {...settings}>
+        <Slider {...settings} className="slick2">
           {slides.map((slide, index) => (
             <div key={index} className="carousel-slide">
               <div className="carousel-content">
                 <div className="text-content">
-                  <h1 className="title">{slide.title}</h1>
+                  {/* <h1 className="title">{slide.title}</h1> */}
                   <div className="paragraphContainer">
-                    <p className="descriptionTitle">{slide.descriptionTitle}</p>
-                    <p className="description">{slide.description}</p>
+                    {/* <p className="descriptionTitle">{slide.descriptionTitle}</p> */}
+                    {isMobileView && index > 0 ? null : (
+                      <p className="description">{slide.description}</p>
+                    )}
                   </div>
                 </div>
                 <div
@@ -467,12 +481,13 @@ export const Home = () => {
             </h1>
           </div>
           <Slider
+            className="slick1"
             {...{
               infinite: true,
               speed: 500,
               slidesToShow: 3,
               slidesToScroll: 1,
-              autoplay: true,
+              autoplay: false,
               autoplaySpeed: 2000,
               prevArrow: (
                 <CustomPrev
@@ -486,6 +501,20 @@ export const Home = () => {
                   setActiveButton={setActiveButton}
                 />
               ),
+              responsive: [
+                {
+                  breakpoint: 900,
+                  settings: {
+                    slidesToShow: 2,
+                  },
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 1,
+                  },
+                },
+              ],
             }}
           >
             {slidesOne.map((slide, index) => (
@@ -606,7 +635,16 @@ export const Home = () => {
                 autoplaySpeed: 2000,
                 prevArrow: <CustomPrevButton />,
                 nextArrow: <CustomNextButton />,
+                responsive: [
+                  {
+                    breakpoint: 1200,
+                    settings: {
+                      slidesToShow: 2,
+                    },
+                  },
+                ],
               }}
+              className="lastSlide"
             >
               {features.map((feature, index) => (
                 <div
@@ -630,7 +668,9 @@ export const Home = () => {
                       target={feature.target}
                       className="btn btn-primary py-2 px-4 buttonReadMore "
                     >
-                      <span>Read More</span>
+                      <span>
+                        <FormattedMessage {...messages.projectsCardButton} />
+                      </span>
                     </NavLink>
                   </div>
                 </div>

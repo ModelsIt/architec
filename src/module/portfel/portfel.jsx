@@ -133,7 +133,16 @@ export const Portfel = () => {
                 autoplaySpeed: 2000,
                 prevArrow: <CustomPrevButton />,
                 nextArrow: <CustomNextButton />,
+                responsive: [
+                  {
+                    breakpoint: 1200, // 1200px-ից հետո
+                    settings: {
+                      slidesToShow: 2, // Ցուցադրում է 2 քարտ
+                    },
+                  },
+                ],
               }}
+              className="lastSlide"
             >
               {features.map((feature, index) => (
                 <div
@@ -157,7 +166,9 @@ export const Portfel = () => {
                       target={feature.target}
                       className="btn btn-primary py-2 px-4 buttonReadMore "
                     >
-                      <span>Read More</span>
+                      <span>
+                        <FormattedMessage {...messages.projectsCardButton} />
+                      </span>
                     </NavLink>
                   </div>
                 </div>

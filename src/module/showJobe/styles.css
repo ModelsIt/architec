@@ -3,12 +3,15 @@
 }
 .showJobsTitle {
   color: #57a6fa;
+  display: flex;
+  justify-content: start;
+  width: 77%;
+  padding: 1% 0 2% 4%;
 }
-.showJobsTitleOne {
+
+.showJobParagraphBox {
+  width: 71%;
   padding: 1% 3%;
-}
-.showJobsList {
-  padding-left: 6%;
 }
 .showJobsTitleTwo {
   padding-bottom: 1%;
@@ -25,6 +28,11 @@
 }
 
 .textSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 17%; */
   grid-row: 1;
   color: white;
 }
@@ -43,10 +51,11 @@
 .videoBuilding {
   border-radius: 45px;
 }
-/* .gallery {
+
+.gallery {
   display: grid;
   gap: 10px;
-  padding: 210px;
+  padding: 3% 6% !important;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 200px;
 }
@@ -56,28 +65,34 @@
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
+
 .galleryItem img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
+
 .galleryItem:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 .imgCenter {
   text-align: center;
 }
+
 .galleryItem.tall {
   grid-row: span 2;
 }
+
 .galleryItem.wide {
   grid-column: span 2;
   text-align: center;
 }
-.galleryItem.wide img {
-  width: 100%;
-}
+
 @media (max-width: 768px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
@@ -85,61 +100,6 @@
 
   .galleryItem.tall {
     grid-row: span 1;
-  }
-
-  .galleryOItem.wide {
-    grid-column: span 1;
-  }
-} */
-
-.gallery {
-  display: grid;
-  gap: 10px;
-  padding: 20px; /* Կարգավորել ըստ անհրաժեշտության */
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 200px;
-}
-
-.galleryItem {
-  background: #090909;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden; /* Ավելացված՝ նկարները դուրս չգան շրջանակից */
-}
-
-.galleryItem img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Նկարները կտրված կդիտվեն առանց ձգվելու */
-  object-position: center; /* Կենտրոնացնում է նկարները */
-}
-
-.galleryItem:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.imgCenter {
-  text-align: center;
-}
-
-.galleryItem.tall {
-  grid-row: span 2;
-}
-
-.galleryItem.wide {
-  grid-column: span 2;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .galleryItem.tall {
-    grid-row: span 1; /* Կարգավորվում է ըստ էկրանի չափերի */
   }
 
   .galleryItem.wide {
@@ -207,4 +167,9 @@
 .prev-btn:hover,
 .next-btn:hover {
   background-color: rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 900px) {
+  .blokNone {
+    display: none !important;
+  }
 }
