@@ -182,14 +182,13 @@ export const WorkUs = () => {
         </div>
         <div className="WorkUsSixVideo">
           <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/I7ZQV-qiAPM?si=77YdEJwW-m-O3y2a"
+            src="https://www.youtube.com/embed/I7ZQV-qiAPM?si=OWnD3n0UCQDXy57-"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
+            className="video"
           ></iframe>
         </div>
       </div>

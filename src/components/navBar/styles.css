@@ -264,7 +264,7 @@
 .navbar-brand {
   position: relative;
   overflow: hidden;
-  padding: 40px 50px 40px 0;
+  padding: 25px 50px 40px 0;
 }
 
 .navbar-brand::before {
@@ -480,15 +480,9 @@
   background: rgb(23, 23, 23, 0.8) !important;
 }
 /* Modal Container */
-.modal-container {
-  position: absolute;
-  background: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  z-index: 1000;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+.modalContainer.open {
+  opacity: 1;
 }
-
 .toggle-btn {
   background: #100d0d;
   border: unset;
@@ -504,10 +498,36 @@
   flex-direction: column;
 }
 /* Modal Content */
-.modal-content {
-  padding: 20px;
-  text-align: center;
-  position: relative;
+.modalContent {
+  position: absolute;
+  transform-origin: top right;
+  margin-top: 0.5rem;
+  right: -10px;
+  top: 4rem;
+  width: 100px;
+  border-radius: 22px;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+  padding-top: 1.25rem;
+  padding-bottom: 0.25rem;
+  border: 1px solid var(--backgroundColor--);
+  z-index: 9999999999999999999999999999999999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+}
+
+.modalContent button {
+  background: unset;
+  border: none;
+  width: 100px;
+  padding-bottom: 15px;
+}
+
+.modalContent button img {
+  width: 35px;
+  height: 35px;
 }
 
 /* Close Button */
@@ -544,12 +564,14 @@
 }
 
 /* Open Modal Animation */
-.modal-container.open {
+
+.modalContainer.open {
   opacity: 1;
   transform: scale(1);
+  z-index: 9999999999999;
 }
 
-.modal-container:not(.open) {
+.modalContainer:not(.open) {
   opacity: 0;
   transform: scale(0.9);
   pointer-events: none;
@@ -989,8 +1011,8 @@
   }
 }
 .logo {
-  width: 200px;
-  height: 70px;
+  width: 213px;
+  height: 87px;
 }
 /* #57a6fa
 #d6d7d8 
@@ -1000,14 +1022,6 @@
   color: #57a6fa;
   text-decoration: none;
   background: rgb(23, 23, 23, 0.8) !important;
-}
-.modal-container {
-  position: absolute;
-  background: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  z-index: 1000;
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .toggle-btn {
@@ -1061,17 +1075,6 @@
   height: 40px;
 }
 
-.modal-container.open {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.modal-container:not(.open) {
-  opacity: 0;
-  transform: scale(0.9);
-  pointer-events: none;
-}
-
 @media (max-width: 1200px) {
   .navbar-nav {
     font-size: 13px;
@@ -1079,7 +1082,7 @@
 }
 
 @media (max-width: 768px) {
-  .modal-container {
+  .modalContainer {
     left: 50%;
     top: 110px !important;
     transform: translateX(-50%);
@@ -1112,7 +1115,7 @@
     display: flex;
     padding-left: 30px;
   }
-  .modal-container {
+  .modalContainer {
     width: 50px;
     left: 89% !important;
   }

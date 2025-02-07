@@ -63,7 +63,7 @@ function CustomNext(props) {
         background: "black",
         position: "relative",
         zIndex: 2,
-        top: 559,
+        top: 50,
         left: 600,
         fontSize: 26,
         color: "white",
@@ -157,19 +157,25 @@ export const AboutUs = () => {
                 className={`button ${activeButtonIndex === 1 ? "active" : ""}`}
                 onClick={() => setActiveButtonIndex(1)}
               >
-                <FormattedMessage {...messages.oNasButtonOne} />
+                <p className="buttonTitle">
+                  <FormattedMessage {...messages.oNasButtonOne} />
+                </p>
               </div>
               <div
                 className={`button ${activeButtonIndex === 2 ? "active" : ""}`}
                 onClick={() => setActiveButtonIndex(2)}
               >
-                <FormattedMessage {...messages.oNasButtonTwo} />
+                <p className="buttonTitle">
+                  <FormattedMessage {...messages.oNasButtonTwo} />
+                </p>
               </div>
               <div
                 className={`button ${activeButtonIndex === 3 ? "active" : ""}`}
                 onClick={() => setActiveButtonIndex(3)}
               >
-                <FormattedMessage {...messages.oNasButtonThere} />
+                <p className="buttonTitle">
+                  <FormattedMessage {...messages.oNasButtonThere} />
+                </p>
               </div>
             </div>
             <div className="linel"></div>
@@ -226,7 +232,7 @@ export const AboutUs = () => {
                   },
                 },
                 {
-                  breakpoint: 600, // 600px-ից ներքև
+                  breakpoint: 600,
                   settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,

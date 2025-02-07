@@ -230,7 +230,7 @@ export const Home = () => {
       text: <FormattedMessage {...messages.projectsCardPharagrapThou} />,
       imgSrc: portfolImgTwo,
       delay: "0.4s",
-      to: "/showJob",
+      to: "/forBuilders",
       target: "_self",
     },
     {
@@ -240,7 +240,7 @@ export const Home = () => {
 
       imgSrc: portfolImgThree,
       delay: "0.6s",
-      to: "/showJobOne",
+      to: "/forFurnitureStores",
       target: "_self",
     },
     {
@@ -250,7 +250,7 @@ export const Home = () => {
 
       imgSrc: portfoliImgThour,
       delay: "0.6s",
-      to: "/workUs",
+      to: "/businessIdeas",
       target: "_self",
     },
   ];
@@ -435,21 +435,27 @@ export const Home = () => {
                 className={`button ${activeButtonIndex === 1 ? "active" : ""}`}
                 onClick={() => setActiveButtonIndex(1)}
               >
-                <FormattedMessage {...messages.oNasButtonOne} />
+                <p className="buttonTitle">
+                  <FormattedMessage {...messages.oNasButtonOne} />
+                </p>
                 <div className="buttonTitle"> </div>
               </div>
               <div
                 className={`button ${activeButtonIndex === 2 ? "active" : ""}`}
                 onClick={() => setActiveButtonIndex(2)}
               >
-                <FormattedMessage {...messages.oNasButtonTwo} />
+                <p className="buttonTitle">
+                  <FormattedMessage {...messages.oNasButtonTwo} />
+                </p>
                 <div className="buttonTitle"> </div>
               </div>
               <div
                 className={`button ${activeButtonIndex === 3 ? "active" : ""}`}
                 onClick={() => setActiveButtonIndex(3)}
               >
-                <FormattedMessage {...messages.oNasButtonThere} />
+                <p className="buttonTitle">
+                  <FormattedMessage {...messages.oNasButtonThere} />
+                </p>
                 <div className="buttonTitle"> </div>
               </div>
             </div>
@@ -458,9 +464,6 @@ export const Home = () => {
               <p>{paragraphs[activeButtonIndex - 1]}</p>
             </div>
             <div className="linel"></div>
-            {/* <div className="buttonMakeAppointment">
-              <div className="buttonTitle">Make Appointment</div>
-            </div> */}
           </div>
           <img
             src={img4}

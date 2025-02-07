@@ -55,7 +55,7 @@ export const Portfel = () => {
       text: <FormattedMessage {...messages.projectsCardPharagrapThou} />,
       imgSrc: portfolImgTwo,
       delay: "0.4s",
-      to: "/showJob",
+      to: "/forBuilders",
       target: "_self",
     },
     {
@@ -75,7 +75,7 @@ export const Portfel = () => {
 
       imgSrc: portfoliImgThour,
       delay: "0.6s",
-      to: "/workUs",
+      to: "/businessIdeas",
       target: "_self",
     },
   ];

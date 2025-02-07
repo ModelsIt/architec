@@ -12,12 +12,15 @@ export const AppRouts = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout>{<Home />}</Layout>} />
-      <Route path="workUs" element={<Layout>{<WorkUs />}</Layout>} />
-      <Route path="showJob" element={<Layout>{<ShowJob />}</Layout>} />
-      <Route path="showJobOne" element={<Layout>{<ShowJobOne />}</Layout>} />
+      <Route path="businessIdeas" element={<Layout>{<WorkUs />}</Layout>} />
+      <Route path="forBuilders" element={<Layout>{<ShowJob />}</Layout>} />
+      <Route
+        path="forFurnitureStores"
+        element={<Layout>{<ShowJobOne />}</Layout>}
+      />
       <Route path="aboutUs" element={<Layout>{<AboutUs />}</Layout>} />
-      <Route path="uslogi" element={<Layout>{<Uslogi />}</Layout>} />
-      <Route path="Проекты" element={<Layout>{<Portfel />}</Layout>} />
+      <Route path="services" element={<Layout>{<Uslogi />}</Layout>} />
+      <Route path="projects" element={<Layout>{<Portfel />}</Layout>} />
     </Routes>
   );
 };

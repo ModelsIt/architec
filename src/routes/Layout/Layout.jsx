@@ -7,7 +7,7 @@ import hy from "../../common/translation/hy.json";
 import ru from "../../common/translation/ru.json";
 
 import { IntlProvider } from "react-intl";
-
+import { useLocation } from "react-router-dom";
 const language = {
   en: "en",
   ru: "ru",
@@ -16,12 +16,14 @@ const language = {
 
 export const Layout = ({ children }) => {
   const [locale, setLocale] = useState(language.en);
-
+  const location = useLocation();
   useEffect(() => {
     const savedLanguage = localStorage.getItem("language") ?? language.en;
     setLocale(savedLanguage);
   }, []);
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location.pathname]);
   const changeLanguage = (lang) => {
     setLocale(lang);
     localStorage.setItem("language", lang);

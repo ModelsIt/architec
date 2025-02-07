@@ -39,21 +39,21 @@ export const Footer = React.forwardRef(({ locale, changeLanguage }, ref) => {
                 <NavLink to="/aboutUs">
                   <FormattedMessage {...messages.navBarListTwo} />
                 </NavLink>
-                <NavLink to="uslogi">
+                <NavLink to="/services">
                   <FormattedMessage {...messages.navBarListThree} />
                 </NavLink>
-                <NavLink to="/Проекты">
+                <NavLink to="/projects">
                   <FormattedMessage {...messages.navBarListFour} />
                 </NavLink>
               </div>
               <div className="footerLinkBoxTwo">
-                <NavLink to="/showJob">
+                <NavLink to="/forBuilders">
                   <FormattedMessage {...messages.navBarListFive1} />
                 </NavLink>
-                <NavLink to="/showJobOne">
+                <NavLink to="/forFurnitureStores">
                   <FormattedMessage {...messages.navBarListFive2} />
                 </NavLink>
-                <NavLink to="/workUs">
+                <NavLink to="/businessIdeas">
                   <FormattedMessage {...messages.navBarListFive3} />
                 </NavLink>
                 <NavLink
@@ -68,7 +68,9 @@ export const Footer = React.forwardRef(({ locale, changeLanguage }, ref) => {
         </div>
 
         <div className="footerParagraph">
-          <img src={logo} alt="logo" className="logoImg" />
+          <NavLink to="/">
+            <img src={logo} alt="logo" className="logoImg" />
+          </NavLink>
           <p
             className="logoParagraph"
             style={{

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./styles.css";
@@ -35,6 +35,15 @@ export const ShowJob = () => {
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(null);
+  const [showPage, setShowPage] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPage(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleImageClick = (index) => {
     setCurrentImageIndex(index);
@@ -121,35 +130,6 @@ export const ShowJob = () => {
             ))}
           </div>
         </div>
-
-        {/* {currentImageIndex !== null && (
-        <div className="modas" onClick={handleCloseModal}>
-          <div className="modal-content">
-            <img
-              src={images[currentImageIndex].src}
-              alt={images[currentImageIndex].alt}
-            />
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                handlePrevImage();
-              }}
-              className="prev-btn"
-            >
-              &#10094;
-            </button>
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                handleNextImage();
-              }}
-              className="next-btn"
-            >
-              &#10095;
-            </button>
-          </div>
-        </div>
-      )} */}
         {currentImageIndex !== null && (
           <div className="modas" onClick={handleCloseModal}>
             <div
@@ -185,15 +165,17 @@ export const ShowJob = () => {
           </div>
         )}
       </div>
-      <div width="100%" style={{ marginBottom: "-6px" }} className="blokNone">
-        <iframe
-          src="https://staging.d1ss4lkbf31qbd.amplifyapp.com/"
-          frameborder="0"
-          width={"100%"}
-          height={"600px"}
-          allow="fullscreen"
-        ></iframe>
-      </div>
+      {showPage && (
+        <div width="100%" style={{ marginBottom: "-6px" }} className="blokNone">
+          <iframe
+            src="https://staging.d1ss4lkbf31qbd.amplifyapp.com/"
+            frameborder="0"
+            width={"100%"}
+            height={"600px"}
+            allow="fullscreen"
+          ></iframe>
+        </div>
+      )}
     </>
   );
 };

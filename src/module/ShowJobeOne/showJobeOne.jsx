@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./styles.css";
@@ -15,7 +15,7 @@ import home8 from "./img/Group 6506.png";
 import home9 from "./img/Group 6511.png";
 import home10 from "./img/Group 6508.png";
 import home11 from "./img/Group 6510.png";
-import home12 from "./img/living_room_1.png";
+import home12 from "./img/sofa.png";
 import home13 from "./img/Mask group.png";
 import { FormattedMessage } from "react-intl";
 import messages from "./messages.js";
@@ -27,7 +27,7 @@ export const ShowJobOne = () => {
     { src: home11, alt: "", className: "tall imgCenter", isVertical: true },
     { src: home1, alt: "" },
     { src: home7, alt: "" },
-    { src: home5, alt: "" }, //
+    { src: home5, alt: "" },
     { src: home4, alt: "" },
     { src: home12, alt: "", className: "wide" },
     { src: home9, alt: "", className: "tall imgCenter" },
@@ -38,6 +38,15 @@ export const ShowJobOne = () => {
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(null);
+  const [showPage, setShowPage] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPage(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleImageClick = (index) => {
     setCurrentImageIndex(index);
@@ -154,20 +163,19 @@ export const ShowJobOne = () => {
             </div>
           </div>
         )}
-
-        {/* <Footer /> */}
       </div>
-
-      <div width="100%" style={{ marginBottom: "-6px" }}>
-        <iframe
-          className="blokNone"
-          src="https://staging.d1gubevygh3b3w.amplifyapp.com/"
-          frameborder="0"
-          width={"100%"}
-          height={"600px"}
-          allow="fullscreen"
-        ></iframe>
-      </div>
+      {showPage && (
+        <div width="100%" style={{ marginBottom: "-6px" }}>
+          <iframe
+            className="blokNone"
+            src="https://staging.d1gubevygh3b3w.amplifyapp.com/"
+            frameborder="0"
+            width={"100%"}
+            height={"600px"}
+            allow="fullscreen"
+          ></iframe>
+        </div>
+      )}
     </>
   );
 };
